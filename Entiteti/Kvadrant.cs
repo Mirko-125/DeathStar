@@ -8,7 +8,7 @@ namespace DeathStar.Entiteti
 {
     internal class Kvadrant
     {
-        public virtual int Redni_broj{ get; protected set; }
+        public virtual int RedniBroj{ get; protected set; }
         public virtual double ProcenjeniPrecnik { get; set; }
         public virtual Galaksija GalaksijaDeo{ get; set; }
     }
