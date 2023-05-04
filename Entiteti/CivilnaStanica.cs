@@ -11,7 +11,7 @@ namespace DeathStar.Entiteti
         public virtual string? Svrha { get; set; }
         public CivilnaStanica() 
         {
-        
+            
         }
     }
 }
