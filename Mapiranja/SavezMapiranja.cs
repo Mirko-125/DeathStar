@@ -14,7 +14,7 @@ namespace DeathStar.Mapiranja
         {
             Table("SAVEZ");
 
-            Id(x => x.Naziv, "NAZIV");
+            Id(x => x.Naziv, "NAZIV").GeneratedBy.Assigned();
 
             Map(x => x.DatumFormiranja, "DATUM_FORMIRANJA");
 

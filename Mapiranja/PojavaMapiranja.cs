@@ -13,7 +13,7 @@ namespace DeathStar.Mapiranja
         public PojavaMapiranja()
         {
             Table("POJAVA");
-            Map(x => x.Naziv).Column("NAZIV");
+            Id(x => x.Naziv, "NAZIV").GeneratedBy.Assigned();
             Map(x => x.TipPojave).Column("TIP_POJAVE");
             Map(x => x.IzazivaLiOpasnost).Column("IZAZIVA_LI_OPASNOST");
 

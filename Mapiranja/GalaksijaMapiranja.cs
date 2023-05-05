@@ -14,7 +14,7 @@ namespace DeathStar.Mapiranja
         {
             Table("GALAKSIJA");
 
-            Id(x => x.Naziv, "NAZIV");
+            Id(x => x.Naziv, "NAZIV").GeneratedBy.Assigned();
             Map(x => x.ProcenjenBrojPlaneta).Column("PROCENJEN_BROJ_PLANETA");
             Map(x => x.ProcenjenBrojZvezda).Column("PROCENJEN_BROJ_ZVEZDA");
             Map(x => x.DominatnaRasa).Column("DOMINATNA_RASA");
