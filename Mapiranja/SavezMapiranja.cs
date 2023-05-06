@@ -27,7 +27,7 @@ namespace DeathStar.Mapiranja
                 .Inverse();
                 
 
-            HasMany(x => x.Igraci)
+           HasMany(x => x.Igraci)
                 .KeyColumn("SAVEZ")
                 .LazyLoad()
                 .Cascade.All()

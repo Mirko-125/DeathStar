@@ -8,9 +8,9 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Entiteti
 {
-    internal class PlanetaMap : ClassMap<Planeta>
+    internal class PlanetaMapiranja : ClassMap<Planeta>
     {
-        public PlanetaMap()
+        public PlanetaMapiranja()
         {
             Table("PLANETA");
 
@@ -39,12 +39,12 @@ namespace DeathStar.Entiteti
                 .Cascade.All()
                 .Inverse();
 
-            References(x => x.PosadaKolonista, "POSADAID").LazyLoad(); // AKO IMA JEDNO
+            References(x => x.PosadaKolonista, "POSADAID").LazyLoad();
             References(x => x.PosadaOsvajaca, "POSADAID").LazyLoad();
             References(x => x.IgracMaticna, "USERNAMEI").LazyLoad();
             References(x => x.IgracKojiJePoseduje, "USERNAMEI").LazyLoad();
 
-            HasMany(x => x.Sateliti)// AKO IMA VISE
+            HasMany(x => x.Sateliti)
                 .KeyColumn("IDP")
                 .LazyLoad()
                 .Cascade.All()
