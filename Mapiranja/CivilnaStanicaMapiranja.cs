@@ -17,7 +17,6 @@ namespace DeathStar.Mapiranja
 
             Map(x => x.Svrha).Column("SVRHA");
 
-            // Same strani kljuc
         }
     }
 }

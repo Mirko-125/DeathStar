@@ -39,12 +39,12 @@ namespace DeathStar.Entiteti
                 .Cascade.All()
                 .Inverse();
 
-            References(x => x.PosadaKolonista, "POSADAID").LazyLoad();
+            References(x => x.PosadaKolonista, "POSADAID").LazyLoad(); // AKO IMA JEDNO
             References(x => x.PosadaOsvajaca, "POSADAID").LazyLoad();
             References(x => x.IgracMaticna, "USERNAMEI").LazyLoad();
             References(x => x.IgracKojiJePoseduje, "USERNAMEI").LazyLoad();
 
-            HasMany(x => x.Sateliti)
+            HasMany(x => x.Sateliti)// AKO IMA VISE
                 .KeyColumn("IDP")
                 .LazyLoad()
                 .Cascade.All()

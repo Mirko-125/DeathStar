@@ -8,12 +8,12 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Mapiranja
 {
-    internal class IgracMapiranja : SubclassMap<Igrac>
+    internal class IgracMapiranja : ClassMap<Igrac>
     {
         public IgracMapiranja()
         {
             Table("IGRAC");
-            KeyColumn("USERNAME");
+            Id(x => x.Username, "USERNAME").GeneratedBy.Assigned();
 
             Map(x => x.Ime).Column("IME");
             Map(x => x.Prezime).Column("PREZIME");
@@ -26,6 +26,21 @@ namespace DeathStar.Mapiranja
             Map(x => x.Drzava).Column("DRZAVA");
 
             // Strani kljucevi
+
+            References(x => x.SavezKomePripada, "NAZIVS").LazyLoad();
+
+            // Osvajanje trenutno ne znam
+
+            // Planete koje poseduje +
+
+            References(x => x.MaticnaPlaneta, "IDP").LazyLoad();
+
+            HasMany(x => x.PosedujePlanete)
+               .KeyColumn("USERNAMEI")
+               .LazyLoad()
+               .Cascade.All()
+               .Inverse();
+
         }
     }
 }

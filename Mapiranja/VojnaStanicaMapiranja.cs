@@ -15,7 +15,14 @@ namespace DeathStar.Mapiranja
             Table("VOJNA");
             KeyColumn("NAZIV");
 
+            HasMany(x => x.Oruzija)
+                .KeyColumn("ORUZJE")
+                .LazyLoad()
+                .Cascade.All()
+                .Inverse();
             // Visevrednosni atribut
+
+            // Ovo samo ig
         }
     }
 }
