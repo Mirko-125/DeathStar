@@ -12,17 +12,14 @@ namespace DeathStar.Mapiranja
     {
         public VojnaStanicaMapiranja() 
         {
-            Table("VOJNA");
-            KeyColumn("NAZIV");
+            Table("VOJNA_SVEMIRSKA_STANICA");
+            Abstract();
 
-            HasMany(x => x.Oruzija)
+            HasMany(x => x.Oruzja)
                 .KeyColumn("ORUZJE")
                 .LazyLoad()
                 .Cascade.All()
                 .Inverse();
-            // Visevrednosni atribut
-
-            // Ovo samo ig
         }
     }
 }

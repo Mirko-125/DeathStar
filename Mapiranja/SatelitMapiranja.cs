@@ -9,15 +9,13 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Mapiranja
 {
-    internal class SatelitMapiranja : ClassMap<Satelit>
+    internal abstract class SatelitMapiranja : ClassMap<Satelit>
     {
         public SatelitMapiranja() 
         {
-            Table("SATELIT");
-            Id(x => x.Naziv, "NAZIV").GeneratedBy.Identity();
-
+            UseUnionSubclassForInheritanceMapping();
+            Id(x => x.Naziv, "NAZIV").GeneratedBy.Guid();
             Map(x=>x.Udaljenost).Column("UDALJENOST");
-
             References(x => x.KruziOkoPlanete, "IDP").LazyLoad();
         }
     }

@@ -8,17 +8,15 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Mapiranja
 {
-    internal class SvemirskaStanicaMapiranja : SubclassMap<SvemirskaStanica>
+    internal abstract class SvemirskaStanicaMapiranja : SubclassMap<SvemirskaStanica>
     {
         public SvemirskaStanicaMapiranja()
         {
-            Table("SVEMIRSKA_STANICA");
-            KeyColumn("NAZIV");
 
+            Abstract();
             Map(x => x.BrojLjudi).Column("BROJ_LJUDI");
             Map(x => x.Velicina).Column("VELICINA");
 
-            //It should be alright?
         }
     }
 }

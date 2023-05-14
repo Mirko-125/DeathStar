@@ -13,12 +13,10 @@ namespace DeathStar.Mapiranja
         public TransportniBrodMapiranja()
         {
             Table("TRANSPORTNI_BROD");
-            KeyColumn("JEDINSTVENI_BROJ");
+            Abstract();
 
-            Map(x => x.ZastitnaOtplata).Column("ZASTITNA_OTPLATA_FLAG");
+            Map(x => x.ZastitnaOtplata).Column("ZASTITNA_OTPLATA");
             Map(x => x.Nosivost).Column("NOSIVOST");
-
-            //Strani kljuc/kljucevi
         }
     }
 }

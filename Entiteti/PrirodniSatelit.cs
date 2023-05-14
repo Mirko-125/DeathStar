@@ -10,9 +10,5 @@ namespace DeathStar.Entiteti
     {
         public virtual int Precnik { get; set; }
         public virtual bool? Naseobine { get; set; }
-        public PrirodniSatelit() 
-        {
-            
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace DeathStar.Entiteti
     internal class Savez
     {
         public virtual string Naziv { get; set; }
-        public virtual DateOnly DatumFormiranja { get; set; }
+        public virtual DateTime DatumFormiranja { get; set; }
         public virtual Savez SavezDeo { get; set; }
         public virtual IList<Savez> Savezi{ get; set; }
         public virtual IList<Igrac> Igraci { get; set; }

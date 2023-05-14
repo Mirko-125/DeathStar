@@ -13,10 +13,8 @@ namespace DeathStar.Mapiranja
         public CivilnaStanicaMapiranja()
         {
             Table("CIVILNA_STANICA");
-            KeyColumn("NAZIV");
-
+            Abstract();
             Map(x => x.Svrha).Column("SVRHA");
-
         }
     }
 }

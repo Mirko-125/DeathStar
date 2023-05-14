@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DeathStar.Entiteti
 {
-    enum tipBroda { Razarac, Krstarica, Fregata };
+
+    //iskoristiti guid za insertovanje. 
+
     internal abstract class Brod
     {
         public virtual int JedinstveniBroj { get; protected set; }
@@ -24,7 +26,7 @@ namespace DeathStar.Entiteti
     {
         public virtual bool FotonskoTorpedo { get; set; }
         public virtual int BrojLaserskihTopova { get; set; }
-        public virtual tipBroda Tip { get; set; }
+        public virtual string Tip { get; set; }
     }
     internal class TransportniBrod : Brod
     {

@@ -13,8 +13,8 @@ namespace DeathStar.Entiteti
         public virtual string Prezime { get; set; }
         public virtual string Pol { get; set; }
         public virtual string Drzava { get; set; }
-        public virtual DateOnly DatumOtvaranjaNaloga { get; set; }
-        public virtual DateOnly DatumRodjenja { get; set; }
+        public virtual DateTime DatumOtvaranjaNaloga { get; set; }
+        public virtual DateTime DatumRodjenja { get; set; }
         public virtual string Email { get; set; }
         public virtual string? URLAvatara { get; set; }
         public virtual string? Opis { get; set; }

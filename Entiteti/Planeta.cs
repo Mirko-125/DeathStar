@@ -22,7 +22,7 @@ namespace DeathStar.Entiteti
         public virtual int? Berilijum { get; set; }
         public virtual int? Trilijum { get; set; }
         public virtual int? Plutonijum { get; set; }
-        public virtual DateOnly? DatumKolonizacije { get; set; }
+        public virtual DateTime? DatumKolonizacije { get; set; }
         public virtual IList<GradoviPlanete> Gradovi { get; set; }
         public virtual Posada? PosadaOsvajaca { get; set; }
         public virtual Posada? PosadaKolonista { get; set; }
