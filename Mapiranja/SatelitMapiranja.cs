@@ -9,12 +9,12 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Mapiranja
 {
-    internal abstract class SatelitMapiranja : ClassMap<Satelit>
+    internal class SatelitMapiranja : ClassMap<Satelit>
     {
         public SatelitMapiranja() 
         {
             UseUnionSubclassForInheritanceMapping();
-            Id(x => x.Naziv, "NAZIV").GeneratedBy.Guid();
+            Id(x => x.Naziv, "NAZIV").GeneratedBy.Assigned();
             Map(x=>x.Udaljenost).Column("UDALJENOST");
             References(x => x.KruziOkoPlanete, "IDP").LazyLoad();
         }

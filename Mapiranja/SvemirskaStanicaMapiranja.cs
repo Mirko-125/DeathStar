@@ -8,7 +8,7 @@ using FluentNHibernate.Mapping;
 
 namespace DeathStar.Mapiranja
 {
-    internal abstract class SvemirskaStanicaMapiranja : SubclassMap<SvemirskaStanica>
+    internal class SvemirskaStanicaMapiranja : SubclassMap<SvemirskaStanica>
     {
         public SvemirskaStanicaMapiranja()
         {
