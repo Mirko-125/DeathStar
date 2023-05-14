@@ -13,8 +13,8 @@ namespace DeathStar.Mapiranja
         public SpisakOruzjaMapiranja()
         {
             CompositeId()
-                .KeyReference(x => x.Oruzje, "IDP")
-                .KeyProperty(x => x.Oruzje, "GRAD");
+                .KeyReference(x => x.Oruzja, "NazivS")
+                .KeyProperty(x => x.Oruzje, "Oruzje");
         }
     }
 }
