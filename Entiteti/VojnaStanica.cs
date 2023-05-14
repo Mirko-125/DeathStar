@@ -8,10 +8,10 @@ namespace DeathStar.Entiteti
 {
     internal class VojnaStanica : SvemirskaStanica
     {
-        public virtual IList<SpisakOruzja> Oruzija { get; set; }
+        public virtual IList<SpisakOruzja> Oruzja { get; set; }
         public VojnaStanica()
         {
-            Oruzija = new List<SpisakOruzja>();
+            Oruzja = new List<SpisakOruzja>();
         }
     }
 }

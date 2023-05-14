@@ -9,9 +9,7 @@ namespace DeathStar.Entiteti
     internal class SpisakOruzja
     {
         public virtual string Oruzje { get; set; }
-        public SpisakOruzja() 
-        {
-        
-        }
+
+
     }
 }
