@@ -17,7 +17,7 @@ namespace DeathStar.Mapiranja
             Id(x => x.Id, "ID").GeneratedBy.Identity();
             Map(x => x.DatumOsvajanja).Column("DATUM_OSVAJANJA");
 
-            References(x => x.PosadaOsvaja).Column("POSADAID").LazyLoad();
+            //References(x => x.PosadaOsvaja).Column("POSADAID").LazyLoad();
             References(x => x.PrethodniVlasnik).Column("USERNAMEI").LazyLoad();
             References(x => x.PlanetaOsvojena).Column("IDP").LazyLoad();
         }

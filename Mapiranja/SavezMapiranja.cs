@@ -34,7 +34,7 @@ namespace DeathStar.Mapiranja
                 .Inverse();
                 
 
-            References(x => x.PosadaDeo, "POSADA_DEO").LazyLoad();
+            //References(x => x.PosadaDeo, "POSADA_DEO").LazyLoad();
         }
     }
 }
