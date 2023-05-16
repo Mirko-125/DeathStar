@@ -27,3 +27,7 @@ C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\refint\DeathStar.
 C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.pdb
 C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.genruntimeconfig.cache
 C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\ref\DeathStar.dll
+C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.Entiteti.DeathStar.resources
+C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.Forme.GalaksijaForma.resources
+C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.Forme.IgracForma.resources
+C:\Users\Mirko\source\repos\DeathStar\obj\Debug\net7.0-windows\DeathStar.Forme.SavezForma.resources

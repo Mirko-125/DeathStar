@@ -6,16 +6,22 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>DeathStar.Program</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entiteti\Forme\**" />
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="Entiteti\Forme\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="Entiteti\Forme\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="3.2.0" />
     <PackageReference Include="NHibernate" Version="5.4.2" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.100" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

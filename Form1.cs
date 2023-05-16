@@ -1,3 +1,4 @@
+using DeathStar.Forme;
 using NHibernate;
 using System.Text;
 
