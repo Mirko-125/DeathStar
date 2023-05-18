@@ -1,0 +1,92 @@
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.csproj.AssemblyReference.cache
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.csproj.SuggestedBindingRedirects.cache
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar_new.Form1.resources
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar_new.Properties.Resources.resources
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.csproj.GenerateResource.cache
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.csproj.CoreCompileInputs.cache
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\DeathStar new.exe.config
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\DeathStar new.exe
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\DeathStar new.pdb
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Antlr3.Runtime.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\FluentNHibernate.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Iesi.Collections.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\NHibernate.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Remotion.Linq.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Buffers.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Memory.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Text.Json.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.ValueTuple.dll
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Antlr3.Runtime.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\FluentNHibernate.pdb
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\FluentNHibernate.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Iesi.Collections.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\NHibernate.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Remotion.Linq.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Buffers.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Memory.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Text.Json.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\bin\Debug\System.ValueTuple.xml
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.csproj.CopyComplete
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.exe
+C:\Users\marid\source\repos\DeathStar new\DeathStar new\obj\Debug\DeathStar new.pdb
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\DeathStar new.exe.config
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\DeathStar new.exe
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\DeathStar new.pdb
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\FluentNHibernate.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Iesi.Collections.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\NHibernate.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Remotion.Linq.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Buffers.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Memory.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Text.Json.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.ValueTuple.dll
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Antlr3.Runtime.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\FluentNHibernate.pdb
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\FluentNHibernate.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Iesi.Collections.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\NHibernate.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Remotion.Linq.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Buffers.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Memory.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Text.Json.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\bin\Debug\System.ValueTuple.xml
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.csproj.AssemblyReference.cache
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.DeathStarMenu.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Form1.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Properties.Resources.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.csproj.GenerateResource.cache
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.csproj.CopyComplete
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.exe
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.pdb
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GakaksijaForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezForma.resources
