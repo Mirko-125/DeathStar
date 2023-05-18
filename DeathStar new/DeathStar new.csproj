@@ -143,11 +143,35 @@
     <Compile Include="Forme\IgracForma.Designer.cs">
       <DependentUpon>IgracForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\KonstrukcijaBroda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KonstrukcijaBroda.Designer.cs">
+      <DependentUpon>KonstrukcijaBroda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OsvojiPlanetu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OsvojiPlanetu.Designer.cs">
+      <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Planete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Planete.Designer.cs">
+      <DependentUpon>Planete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\SavezForma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\SavezForma.Designer.cs">
       <DependentUpon>SavezForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\VojneStanice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\VojneStanice.Designer.cs">
+      <DependentUpon>VojneStanice.cs</DependentUpon>
     </Compile>
     <Compile Include="InnerExceptionHandler.cs" />
     <Compile Include="Mapiranja\BorbeniBrodMapiranja.cs" />
@@ -182,8 +206,20 @@
     <EmbeddedResource Include="Forme\IgracForma.resx">
       <DependentUpon>IgracForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KonstrukcijaBroda.resx">
+      <DependentUpon>KonstrukcijaBroda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OsvojiPlanetu.resx">
+      <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Planete.resx">
+      <DependentUpon>Planete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\SavezForma.resx">
       <DependentUpon>SavezForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\VojneStanice.resx">
+      <DependentUpon>VojneStanice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
