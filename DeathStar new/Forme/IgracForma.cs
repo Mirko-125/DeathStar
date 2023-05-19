@@ -21,5 +21,10 @@ namespace DeathStar_new.Forme
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

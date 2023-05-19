@@ -69,15 +69,17 @@
             this.groupBox2.Controls.Add(this.OsvojiPlanetu);
             this.groupBox2.Controls.Add(this.PrikaziVojneStanice);
             this.groupBox2.Controls.Add(this.KonstruisiBrod);
-            this.groupBox2.Location = new System.Drawing.Point(1193, 13);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Location = new System.Drawing.Point(1133, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(203, 257);
+            this.groupBox2.Size = new System.Drawing.Size(203, 274);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcije";
             // 
             // DodajGrad
             // 
+            this.DodajGrad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DodajGrad.Location = new System.Drawing.Point(7, 226);
             this.DodajGrad.Name = "DodajGrad";
             this.DodajGrad.Size = new System.Drawing.Size(190, 23);
@@ -87,6 +89,7 @@
             // 
             // button7
             // 
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button7.Location = new System.Drawing.Point(7, 197);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(190, 23);
@@ -96,6 +99,7 @@
             // 
             // UnistiPlanetu
             // 
+            this.UnistiPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.UnistiPlanetu.Location = new System.Drawing.Point(7, 168);
             this.UnistiPlanetu.Name = "UnistiPlanetu";
             this.UnistiPlanetu.Size = new System.Drawing.Size(190, 23);
@@ -105,6 +109,7 @@
             // 
             // DodeliIgracuPlanetu
             // 
+            this.DodeliIgracuPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DodeliIgracuPlanetu.Location = new System.Drawing.Point(7, 139);
             this.DodeliIgracuPlanetu.Name = "DodeliIgracuPlanetu";
             this.DodeliIgracuPlanetu.Size = new System.Drawing.Size(190, 23);
@@ -114,6 +119,7 @@
             // 
             // SagradiSvemirskuStanicu
             // 
+            this.SagradiSvemirskuStanicu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SagradiSvemirskuStanicu.Location = new System.Drawing.Point(7, 110);
             this.SagradiSvemirskuStanicu.Name = "SagradiSvemirskuStanicu";
             this.SagradiSvemirskuStanicu.Size = new System.Drawing.Size(190, 23);
@@ -123,6 +129,7 @@
             // 
             // OsvojiPlanetu
             // 
+            this.OsvojiPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.OsvojiPlanetu.Location = new System.Drawing.Point(7, 80);
             this.OsvojiPlanetu.Name = "OsvojiPlanetu";
             this.OsvojiPlanetu.Size = new System.Drawing.Size(190, 23);
@@ -132,6 +139,7 @@
             // 
             // PrikaziVojneStanice
             // 
+            this.PrikaziVojneStanice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PrikaziVojneStanice.Location = new System.Drawing.Point(7, 50);
             this.PrikaziVojneStanice.Name = "PrikaziVojneStanice";
             this.PrikaziVojneStanice.Size = new System.Drawing.Size(190, 23);
@@ -141,6 +149,7 @@
             // 
             // KonstruisiBrod
             // 
+            this.KonstruisiBrod.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.KonstruisiBrod.Location = new System.Drawing.Point(7, 20);
             this.KonstruisiBrod.Name = "KonstruisiBrod";
             this.KonstruisiBrod.Size = new System.Drawing.Size(190, 23);
@@ -151,6 +160,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listaPlaneta);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1114, 482);
@@ -262,8 +272,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1408, 513);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(1342, 513);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

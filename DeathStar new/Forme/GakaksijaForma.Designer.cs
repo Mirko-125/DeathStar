@@ -42,15 +42,19 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gray;
+            this.groupBox1.BackColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Controls.Add(this.listaGalaksija);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(21, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(557, 335);
@@ -100,14 +104,14 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F);
-            this.button1.Location = new System.Drawing.Point(601, 24);
+            this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(6, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 62);
+            this.button1.Size = new System.Drawing.Size(188, 27);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Prikazi Planete";
+            this.button1.Text = "Prikaži planete";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -120,6 +124,7 @@
             this.groupBox4.Controls.Add(this.obrisiGalaksiju);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox4.Location = new System.Drawing.Point(601, 212);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 141);
@@ -130,22 +135,22 @@
             // 
             // obrisiGalaksiju
             // 
-            this.obrisiGalaksiju.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.obrisiGalaksiju.BackColor = System.Drawing.Color.Maroon;
             this.obrisiGalaksiju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.obrisiGalaksiju.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
+            this.obrisiGalaksiju.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.obrisiGalaksiju.Location = new System.Drawing.Point(6, 100);
             this.obrisiGalaksiju.Name = "obrisiGalaksiju";
             this.obrisiGalaksiju.Size = new System.Drawing.Size(188, 35);
             this.obrisiGalaksiju.TabIndex = 2;
-            this.obrisiGalaksiju.Text = "Obrisi galaksiju";
+            this.obrisiGalaksiju.Text = "Obriši galaksiju";
             this.obrisiGalaksiju.UseVisualStyleBackColor = false;
             this.obrisiGalaksiju.Click += new System.EventHandler(this.obrisiGalaksiju_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button4.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
+            this.button4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(6, 59);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 35);
@@ -155,9 +160,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button3.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
+            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(6, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(188, 35);
@@ -168,32 +173,45 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(601, 116);
+            this.button2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(6, 52);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 63);
+            this.button2.Size = new System.Drawing.Size(188, 27);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Prikazi Kvadrante";
+            this.button2.Text = "Prikaži kvadrante";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox2.Location = new System.Drawing.Point(601, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 98);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Prikaz";
             // 
             // GakaksijaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(815, 392);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GakaksijaForma";
             this.Text = "Gakaksija";
             this.Load += new System.EventHandler(this.GakaksijaForma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -213,5 +231,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button obrisiGalaksiju;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
