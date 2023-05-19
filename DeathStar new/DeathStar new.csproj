@@ -142,6 +142,12 @@
     <Compile Include="Forme\GalaksijaDodajForma.Designer.cs">
       <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\IgracDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IgracDodajForma.Designer.cs">
+      <DependentUpon>IgracDodajForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\IgracForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\GalaksijaDodajForma.resx">
       <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IgracDodajForma.resx">
+      <DependentUpon>IgracDodajForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IgracForma.resx">
       <DependentUpon>IgracForma.cs</DependentUpon>

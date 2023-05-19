@@ -48,6 +48,7 @@
             this.textNaziv.Name = "textNaziv";
             this.textNaziv.Size = new System.Drawing.Size(121, 20);
             this.textNaziv.TabIndex = 0;
+            this.textNaziv.TextChanged += new System.EventHandler(this.textNaziv_TextChanged);
             // 
             // textBrojPlaneta
             // 

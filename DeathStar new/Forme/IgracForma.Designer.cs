@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IgracForma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listaIgraca = new System.Windows.Forms.ListView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Izmeni_Igraca = new System.Windows.Forms.Button();
-            this.Obrisi_Igraca = new System.Windows.Forms.Button();
-            this.Dodaj_Igraca = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Izaberi_Posadu = new System.Windows.Forms.Button();
             this.Username = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Prezime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,6 +41,12 @@
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.URL_Avatara = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Opis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Izmeni_Igraca = new System.Windows.Forms.Button();
+            this.Obrisi_Igraca = new System.Windows.Forms.Button();
+            this.Dodaj_Igraca = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Izaberi_Posadu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,70 +87,6 @@
             this.listaIgraca.UseCompatibleStateImageBehavior = false;
             this.listaIgraca.View = System.Windows.Forms.View.Details;
             this.listaIgraca.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.Izmeni_Igraca);
-            this.groupBox2.Controls.Add(this.Obrisi_Igraca);
-            this.groupBox2.Controls.Add(this.Dodaj_Igraca);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(949, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 259);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Meni za igrače";
-            // 
-            // Izmeni_Igraca
-            // 
-            this.Izmeni_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Izmeni_Igraca.Location = new System.Drawing.Point(7, 78);
-            this.Izmeni_Igraca.Name = "Izmeni_Igraca";
-            this.Izmeni_Igraca.Size = new System.Drawing.Size(187, 23);
-            this.Izmeni_Igraca.TabIndex = 2;
-            this.Izmeni_Igraca.Text = "Izmeni igrača";
-            this.Izmeni_Igraca.UseVisualStyleBackColor = true;
-            // 
-            // Obrisi_Igraca
-            // 
-            this.Obrisi_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Obrisi_Igraca.Location = new System.Drawing.Point(7, 49);
-            this.Obrisi_Igraca.Name = "Obrisi_Igraca";
-            this.Obrisi_Igraca.Size = new System.Drawing.Size(187, 23);
-            this.Obrisi_Igraca.TabIndex = 1;
-            this.Obrisi_Igraca.Text = "Obriši igrača";
-            this.Obrisi_Igraca.UseVisualStyleBackColor = true;
-            // 
-            // Dodaj_Igraca
-            // 
-            this.Dodaj_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Dodaj_Igraca.Location = new System.Drawing.Point(7, 20);
-            this.Dodaj_Igraca.Name = "Dodaj_Igraca";
-            this.Dodaj_Igraca.Size = new System.Drawing.Size(187, 23);
-            this.Dodaj_Igraca.TabIndex = 0;
-            this.Dodaj_Igraca.Text = "Dodaj igrača";
-            this.Dodaj_Igraca.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.Izaberi_Posadu);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(949, 277);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 68);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Posade";
-            // 
-            // Izaberi_Posadu
-            // 
-            this.Izaberi_Posadu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Izaberi_Posadu.Location = new System.Drawing.Point(6, 19);
-            this.Izaberi_Posadu.Name = "Izaberi_Posadu";
-            this.Izaberi_Posadu.Size = new System.Drawing.Size(187, 23);
-            this.Izaberi_Posadu.TabIndex = 0;
-            this.Izaberi_Posadu.Text = "Izaberi posadu";
-            this.Izaberi_Posadu.UseVisualStyleBackColor = true;
             // 
             // Username
             // 
@@ -202,6 +138,71 @@
             this.Opis.Text = "Opis";
             this.Opis.Width = 281;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Izmeni_Igraca);
+            this.groupBox2.Controls.Add(this.Obrisi_Igraca);
+            this.groupBox2.Controls.Add(this.Dodaj_Igraca);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Location = new System.Drawing.Point(949, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 259);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Meni za igrače";
+            // 
+            // Izmeni_Igraca
+            // 
+            this.Izmeni_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Izmeni_Igraca.Location = new System.Drawing.Point(7, 78);
+            this.Izmeni_Igraca.Name = "Izmeni_Igraca";
+            this.Izmeni_Igraca.Size = new System.Drawing.Size(187, 23);
+            this.Izmeni_Igraca.TabIndex = 2;
+            this.Izmeni_Igraca.Text = "Izmeni igrača";
+            this.Izmeni_Igraca.UseVisualStyleBackColor = true;
+            // 
+            // Obrisi_Igraca
+            // 
+            this.Obrisi_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Obrisi_Igraca.Location = new System.Drawing.Point(7, 49);
+            this.Obrisi_Igraca.Name = "Obrisi_Igraca";
+            this.Obrisi_Igraca.Size = new System.Drawing.Size(187, 23);
+            this.Obrisi_Igraca.TabIndex = 1;
+            this.Obrisi_Igraca.Text = "Obriši igrača";
+            this.Obrisi_Igraca.UseVisualStyleBackColor = true;
+            // 
+            // Dodaj_Igraca
+            // 
+            this.Dodaj_Igraca.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Dodaj_Igraca.Location = new System.Drawing.Point(7, 20);
+            this.Dodaj_Igraca.Name = "Dodaj_Igraca";
+            this.Dodaj_Igraca.Size = new System.Drawing.Size(187, 23);
+            this.Dodaj_Igraca.TabIndex = 0;
+            this.Dodaj_Igraca.Text = "Dodaj igrača";
+            this.Dodaj_Igraca.UseVisualStyleBackColor = true;
+            this.Dodaj_Igraca.Click += new System.EventHandler(this.Dodaj_Igraca_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Izaberi_Posadu);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox3.Location = new System.Drawing.Point(949, 277);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 68);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Posade";
+            // 
+            // Izaberi_Posadu
+            // 
+            this.Izaberi_Posadu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Izaberi_Posadu.Location = new System.Drawing.Point(6, 19);
+            this.Izaberi_Posadu.Name = "Izaberi_Posadu";
+            this.Izaberi_Posadu.Size = new System.Drawing.Size(187, 23);
+            this.Izaberi_Posadu.TabIndex = 0;
+            this.Izaberi_Posadu.Text = "Izaberi posadu";
+            this.Izaberi_Posadu.UseVisualStyleBackColor = true;
+            // 
             // IgracForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IgracForma";
             this.Text = "Igrac";
+            this.Load += new System.EventHandler(this.IgracForma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

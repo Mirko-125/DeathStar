@@ -39,8 +39,8 @@ namespace DeathStar_new.Forme
                     i.prezime,
                     i.pol,
                     i.drzava,
-                    i.datumRodjenja.ToString(),
-                    i.datumOtvaranjaNaloga.ToString(),
+                    i.datumRodjenja.ToShortDateString(),
+                    i.datumOtvaranjaNaloga.ToShortDateString(),
                     i.email,
                     i.urlAvatara,
                     i.opis
@@ -50,5 +50,16 @@ namespace DeathStar_new.Forme
             listaIgraca.Refresh();
         }
 
+        private void IgracForma_Load(object sender, EventArgs e)
+        {
+            popuniTabeluIgraca();
+        }
+
+        private void Dodaj_Igraca_Click(object sender, EventArgs e)
+        {
+            IgracDodajForma formaDodaj = new IgracDodajForma();
+            formaDodaj.ShowDialog();
+            this.popuniTabeluIgraca();
+        }
     }
 }

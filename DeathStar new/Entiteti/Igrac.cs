@@ -8,7 +8,7 @@ namespace DeathStar_new.Entiteti
 {
     internal class Igrac
     {
-        public virtual string Username { get; protected set; }
+        public virtual string Username { get; set; }
         public virtual string Ime { get; set; }
         public virtual string Prezime { get; set; }
         public virtual string Pol { get; set; }

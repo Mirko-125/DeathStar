@@ -175,6 +175,36 @@ namespace DeathStar_new
 
             return igraci;
         }
+
+        public static void dodajIgraca(IgracBasic i)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Igrac o = new Igrac();
+
+                o.Username = i.username;
+                o.Ime = i.ime;
+                o.Prezime = i.prezime;
+                o.Pol = i.pol;
+                o.Drzava = i.drzava;
+                o.DatumRodjenja = i.datumRodjenja;
+                o.Email = i.email;
+                o.URLAvatara = i.urlAvatara;
+                o.Opis = i.opis;
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+        }
         #endregion
 
         public static DialogResult confirmMessage(string izabranoTelo)

@@ -148,3 +148,4 @@ C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvojiPlanetu.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracDodajForma.resources
