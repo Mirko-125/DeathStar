@@ -1,4 +1,4 @@
-﻿using DeathStar.Entiteti;
+﻿using DeathStar_new.Entiteti;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -457,8 +457,8 @@ namespace DeathStar_new
     public class GalaksijaBasic
     {
         public string naziv;
-        public int procenjenBrojZvezda;
-        public int procenjenBrojPlaneta;
+        public Int64 procenjenBrojZvezda;
+        public Int64 procenjenBrojPlaneta;
         public string dominantnaRasa;
 
         public IList<PlanetaBasic> planete;
@@ -469,7 +469,7 @@ namespace DeathStar_new
             planete = new List<PlanetaBasic>();
             kvadranti = new List<KvadrantBasic>();
         }
-        public GalaksijaBasic(string naziv, int procenjenBrojZvezda, int procenjenBrojPlaneta, string dominantnaRasa)
+        public GalaksijaBasic(string naziv, Int64 procenjenBrojZvezda, Int64 procenjenBrojPlaneta, string dominantnaRasa)
         {
             this.naziv = naziv;
             this.procenjenBrojZvezda = procenjenBrojZvezda;
@@ -480,12 +480,12 @@ namespace DeathStar_new
     public class GalaksijaPregled
     {
         public string naziv;
-        public int procenjenBrojZvezda;
-        public int procenjenBrojPlaneta;
+        public Int64 procenjenBrojZvezda;
+        public Int64 procenjenBrojPlaneta;
         public string dominantnaRasa;
 
         public GalaksijaPregled() { }
-        public GalaksijaPregled(string naziv, int procenjenBrojZvezda, int procenjenBrojPlaneta, string dominantnaRasa)
+        public GalaksijaPregled(string naziv, Int64 procenjenBrojZvezda, Int64 procenjenBrojPlaneta, string dominantnaRasa)
         {
             this.naziv = naziv;
             this.procenjenBrojZvezda = procenjenBrojZvezda;

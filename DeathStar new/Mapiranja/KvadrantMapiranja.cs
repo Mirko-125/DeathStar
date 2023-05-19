@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DeathStar.Entiteti;
+using DeathStar_new.Entiteti;
 using FluentNHibernate.Mapping;
 
-namespace DeathStar.Mapiranja
+namespace DeathStar_new.Mapiranja
 {
     internal class KvadrantMapiranja : ClassMap<Kvadrant>
     {
@@ -16,7 +16,7 @@ namespace DeathStar.Mapiranja
 
             Id(x => x.RedniBroj, "REDNI_BROJ").GeneratedBy.Identity();
             Map(x => x.ProcenjeniPrecnik).Column("PROCENJENI_PRECNIK");
-            References(x => x.GalaksijaDeo).Column("NAZIVGALAKSIJE").LazyLoad();
+            References(x => x.DeoGalaksije).Column("NAZIVG").LazyLoad();
         }
     }
 }

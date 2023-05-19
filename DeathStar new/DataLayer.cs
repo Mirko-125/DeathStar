@@ -8,7 +8,7 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using System.Windows.Forms;
 
-namespace DeathStar
+namespace DeathStar_new
 {
     class DataLayer
     {
@@ -44,7 +44,7 @@ namespace DeathStar
 
                 return Fluently.Configure()
                     .Database(cfg.ShowSql())
-                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DeathStar.Mapiranja.KvadrantMapiranja>())
+                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<DeathStar_new.Mapiranja.KvadrantMapiranja>())
                     .BuildSessionFactory();
             }
             catch (Exception ec)

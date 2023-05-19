@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DeathStar.Entiteti;
+using DeathStar_new.Entiteti;
 using FluentNHibernate.Mapping;
 
-namespace DeathStar.Entiteti
+namespace DeathStar_new.Entiteti
 {
     internal class PlanetaMapiranja : ClassMap<Planeta>
     {
@@ -32,6 +32,8 @@ namespace DeathStar.Entiteti
             Map(x => x.DatumKolonizacije, "DATUM_KOLONIZACIJE");
 
             References(x => x.UGalaksiji, "NAZIVG").LazyLoad();
+            References(x => x.PosadaOsvajaca, "POSADAID").LazyLoad();
+            References(x => x.IgracKojiJePoseduje, "USERNAMEI").LazyLoad();
 
             HasMany(x => x.Gradovi)
                 .KeyColumn("IDP")
@@ -39,9 +41,11 @@ namespace DeathStar.Entiteti
                 .Cascade.All()
                 .Inverse();
 
-            //References(x => x.PosadaKolonista, "POSADAID").LazyLoad();
-            //References(x => x.PosadaOsvajaca, "POSADAID").LazyLoad();
-            References(x => x.IgracKojiJePoseduje, "USERNAMEI").LazyLoad();
+            HasMany(x => x.IstorijaOsvajanja)
+                .KeyColumn("IDP")
+                .LazyLoad()
+                .Cascade.All()
+                .Inverse();
 
             HasMany(x => x.Sateliti)
                 .KeyColumn("IDP")
@@ -60,6 +64,8 @@ namespace DeathStar.Entiteti
                 .LazyLoad()
                 .Cascade.All()
                 .Inverse();
+
+
         }
     }
 }

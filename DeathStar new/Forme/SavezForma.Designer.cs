@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SavezForma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Dodaj_Savez = new System.Windows.Forms.Button();
-            this.Pridruzi_Savez = new System.Windows.Forms.Button();
-            this.Prikazi_Clanove_Saveza = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Prikazi_Clanove_Saveza = new System.Windows.Forms.Button();
+            this.Pridruzi_Savez = new System.Windows.Forms.Button();
+            this.Dodaj_Savez = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +49,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Svi savezi";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(7, 21);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(560, 399);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Prikazi_Clanove_Saveza);
@@ -61,14 +71,14 @@
             this.groupBox2.Text = "O savezima";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // Dodaj_Savez
+            // Prikazi_Clanove_Saveza
             // 
-            this.Dodaj_Savez.Location = new System.Drawing.Point(7, 20);
-            this.Dodaj_Savez.Name = "Dodaj_Savez";
-            this.Dodaj_Savez.Size = new System.Drawing.Size(172, 23);
-            this.Dodaj_Savez.TabIndex = 0;
-            this.Dodaj_Savez.Text = "Dodaj savez";
-            this.Dodaj_Savez.UseVisualStyleBackColor = true;
+            this.Prikazi_Clanove_Saveza.Location = new System.Drawing.Point(7, 80);
+            this.Prikazi_Clanove_Saveza.Name = "Prikazi_Clanove_Saveza";
+            this.Prikazi_Clanove_Saveza.Size = new System.Drawing.Size(172, 23);
+            this.Prikazi_Clanove_Saveza.TabIndex = 2;
+            this.Prikazi_Clanove_Saveza.Text = "Prikazi članove saveza";
+            this.Prikazi_Clanove_Saveza.UseVisualStyleBackColor = true;
             // 
             // Pridruzi_Savez
             // 
@@ -79,23 +89,14 @@
             this.Pridruzi_Savez.Text = "Pridruzi savez";
             this.Pridruzi_Savez.UseVisualStyleBackColor = true;
             // 
-            // Prikazi_Clanove_Saveza
+            // Dodaj_Savez
             // 
-            this.Prikazi_Clanove_Saveza.Location = new System.Drawing.Point(7, 80);
-            this.Prikazi_Clanove_Saveza.Name = "Prikazi_Clanove_Saveza";
-            this.Prikazi_Clanove_Saveza.Size = new System.Drawing.Size(172, 23);
-            this.Prikazi_Clanove_Saveza.TabIndex = 2;
-            this.Prikazi_Clanove_Saveza.Text = "Prikazi članove saveza";
-            this.Prikazi_Clanove_Saveza.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(560, 399);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.Dodaj_Savez.Location = new System.Drawing.Point(7, 20);
+            this.Dodaj_Savez.Name = "Dodaj_Savez";
+            this.Dodaj_Savez.Size = new System.Drawing.Size(172, 23);
+            this.Dodaj_Savez.TabIndex = 0;
+            this.Dodaj_Savez.Text = "Dodaj savez";
+            this.Dodaj_Savez.UseVisualStyleBackColor = true;
             // 
             // SavezForma
             // 
@@ -104,6 +105,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SavezForma";
             this.Text = "Savez";
             this.groupBox1.ResumeLayout(false);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeathStar.Entiteti
+namespace DeathStar_new.Entiteti
 {
     internal class Igrac
     {
@@ -18,13 +18,14 @@ namespace DeathStar.Entiteti
         public virtual string Email { get; set; }
         public virtual string URLAvatara { get; set; }
         public virtual string Opis { get; set; }
-
+        public virtual IList<Osvajanje> IstorijaBivsihPlaneta { get; set; }
         public virtual Posada DeoPosade { get; set; }
         public virtual Planeta MaticnaPlaneta { get; set; }
         public virtual IList<Planeta> PosedujePlanete { get; set; }
-        public virtual Savez SavezKomePripada { get; set; }
+        public virtual Savez DeoSaveza { get; set; }
         public Igrac()
         {
+            IstorijaBivsihPlaneta = new List<Osvajanje>();
             PosedujePlanete = new List<Planeta>();
         }
     }

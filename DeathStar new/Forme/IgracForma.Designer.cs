@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IgracForma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Dodaj_Igraca = new System.Windows.Forms.Button();
-            this.Obrisi_Igraca = new System.Windows.Forms.Button();
-            this.Izmeni_Igraca = new System.Windows.Forms.Button();
-            this.Izaberi_Posadu = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Izmeni_Igraca = new System.Windows.Forms.Button();
+            this.Obrisi_Igraca = new System.Windows.Forms.Button();
+            this.Dodaj_Igraca = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Izaberi_Posadu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -51,6 +52,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista igrača";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(7, 20);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(510, 400);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Izmeni_Igraca);
@@ -63,24 +74,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Meni za igrače";
             // 
-            // groupBox3
+            // Izmeni_Igraca
             // 
-            this.groupBox3.Controls.Add(this.Izaberi_Posadu);
-            this.groupBox3.Location = new System.Drawing.Point(556, 278);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 68);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Posade";
-            // 
-            // Dodaj_Igraca
-            // 
-            this.Dodaj_Igraca.Location = new System.Drawing.Point(7, 20);
-            this.Dodaj_Igraca.Name = "Dodaj_Igraca";
-            this.Dodaj_Igraca.Size = new System.Drawing.Size(187, 23);
-            this.Dodaj_Igraca.TabIndex = 0;
-            this.Dodaj_Igraca.Text = "Dodaj igrača";
-            this.Dodaj_Igraca.UseVisualStyleBackColor = true;
+            this.Izmeni_Igraca.Location = new System.Drawing.Point(7, 78);
+            this.Izmeni_Igraca.Name = "Izmeni_Igraca";
+            this.Izmeni_Igraca.Size = new System.Drawing.Size(187, 23);
+            this.Izmeni_Igraca.TabIndex = 2;
+            this.Izmeni_Igraca.Text = "Izmeni igrača";
+            this.Izmeni_Igraca.UseVisualStyleBackColor = true;
             // 
             // Obrisi_Igraca
             // 
@@ -91,14 +92,24 @@
             this.Obrisi_Igraca.Text = "Obriši igrača";
             this.Obrisi_Igraca.UseVisualStyleBackColor = true;
             // 
-            // Izmeni_Igraca
+            // Dodaj_Igraca
             // 
-            this.Izmeni_Igraca.Location = new System.Drawing.Point(7, 78);
-            this.Izmeni_Igraca.Name = "Izmeni_Igraca";
-            this.Izmeni_Igraca.Size = new System.Drawing.Size(187, 23);
-            this.Izmeni_Igraca.TabIndex = 2;
-            this.Izmeni_Igraca.Text = "Izmeni igrača";
-            this.Izmeni_Igraca.UseVisualStyleBackColor = true;
+            this.Dodaj_Igraca.Location = new System.Drawing.Point(7, 20);
+            this.Dodaj_Igraca.Name = "Dodaj_Igraca";
+            this.Dodaj_Igraca.Size = new System.Drawing.Size(187, 23);
+            this.Dodaj_Igraca.TabIndex = 0;
+            this.Dodaj_Igraca.Text = "Dodaj igrača";
+            this.Dodaj_Igraca.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Izaberi_Posadu);
+            this.groupBox3.Location = new System.Drawing.Point(556, 278);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 68);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Posade";
             // 
             // Izaberi_Posadu
             // 
@@ -109,16 +120,6 @@
             this.Izaberi_Posadu.Text = "Izaberi posadu";
             this.Izaberi_Posadu.UseVisualStyleBackColor = true;
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(510, 400);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
             // IgracForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +128,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IgracForma";
             this.Text = "Igrac";
             this.groupBox1.ResumeLayout(false);

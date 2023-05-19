@@ -5,13 +5,13 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeathStar.Entiteti
+namespace DeathStar_new.Entiteti
 {
     internal class Galaksija
     {
         public virtual string Naziv { get; set; }
-        public virtual int ProcenjenBrojZvezda{ get; set; }
-        public virtual int ProcenjenBrojPlaneta{ get; set; }
+        public virtual Int64 ProcenjenBrojZvezda{ get; set; }
+        public virtual Int64 ProcenjenBrojPlaneta{ get; set; }
         public virtual string DominantnaRasa { get; set; }
         public virtual IList<Planeta> Planete{ get; set; }
         public virtual IList<Kvadrant> Kvadranti{ get; set; }

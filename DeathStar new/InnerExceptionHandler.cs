@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DeathStar
+namespace DeathStar_new
 {
     internal class InnerExceptionHandler
     {

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DeathStar.Entiteti;
+using DeathStar_new.Entiteti;
 
-namespace DeathStar.Mapiranja
+namespace DeathStar_new.Mapiranja
 {
     internal class TransportniBrodMapiranja : SubclassMap<TransportniBrod>
     {

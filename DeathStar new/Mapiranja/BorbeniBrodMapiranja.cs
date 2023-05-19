@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DeathStar.Entiteti;
+using DeathStar_new.Entiteti;
 
-namespace DeathStar.Mapiranja
+namespace DeathStar_new.Mapiranja
 {
     internal class BorbeniBrodMapiranja : SubclassMap<BorbeniBrod>
     {
@@ -15,7 +15,7 @@ namespace DeathStar.Mapiranja
             Table("BORBENI_BROD");
             Abstract();
 
-            Map(x => x.FotonskoTorpedo).Column("FOTONSKO_TORPEDO_FLAG");
+            Map(x => x.FotonskoTorpedo).Column("FOTONSKO_TORPEDO");
             Map(x => x.BrojLaserskihTopova).Column("BROJ_LASERSKIH_TOPOVA");
             Map(x => x.Tip).Column("TIP_BRODA"); // Ovde je tip Enum, proveri to
              

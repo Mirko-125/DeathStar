@@ -1,4 +1,4 @@
-﻿using DeathStar.Entiteti;
+﻿using DeathStar_new.Entiteti;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeathStar.Mapiranja
+namespace DeathStar_new.Mapiranja
 {
     internal class GradoviPlaneteMapiranja : ClassMap<GradoviPlanete>
     {

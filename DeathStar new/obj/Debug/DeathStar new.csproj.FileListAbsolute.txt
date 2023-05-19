@@ -90,3 +90,61 @@ C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar new.
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GakaksijaForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\DeathStar new.exe.config
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\DeathStar new.exe
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\DeathStar new.pdb
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Antlr3.Runtime.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\FluentNHibernate.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Iesi.Collections.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\NHibernate.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Remotion.Linq.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Buffers.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Memory.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Numerics.Vectors.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Text.Encodings.Web.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Text.Json.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.ValueTuple.dll
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Antlr3.Runtime.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\FluentNHibernate.pdb
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\FluentNHibernate.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Iesi.Collections.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\NHibernate.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Remotion.Linq.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\Remotion.Linq.EagerFetching.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Buffers.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Memory.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Numerics.Vectors.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Text.Encodings.Web.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Text.Json.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\bin\Debug\System.ValueTuple.xml
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.csproj.AssemblyReference.cache
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.csproj.SuggestedBindingRedirects.cache
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.DeathStarMenu.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Form1.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.GakaksijaForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.KonstrukcijaBroda.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvojiPlanetu.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Properties.Resources.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.csproj.GenerateResource.cache
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.csproj.CoreCompileInputs.cache
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.csproj.CopyComplete
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.exe
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar new.pdb
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.GalaksijaDodajForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GalaksijaDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.KonstrukcijaBroda.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvojiPlanetu.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources

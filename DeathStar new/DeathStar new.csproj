@@ -120,7 +120,6 @@
     <Compile Include="Entiteti\Pojava.cs" />
     <Compile Include="Entiteti\Posada.cs" />
     <Compile Include="Entiteti\PrirodniSatelit.cs" />
-    <Compile Include="Entiteti\Satelit.cs" />
     <Compile Include="Entiteti\Savez.cs" />
     <Compile Include="Entiteti\SpisakOruzja.cs" />
     <Compile Include="Entiteti\SvemirskaStanica.cs" />
@@ -136,6 +135,12 @@
     </Compile>
     <Compile Include="Forme\GakaksijaForma.Designer.cs">
       <DependentUpon>GakaksijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijaDodajForma.Designer.cs">
+      <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IgracForma.cs">
       <SubType>Form</SubType>
@@ -155,11 +160,11 @@
     <Compile Include="Forme\OsvojiPlanetu.Designer.cs">
       <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Planete.cs">
+    <Compile Include="Forme\PlaneteForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Planete.Designer.cs">
-      <DependentUpon>Planete.cs</DependentUpon>
+    <Compile Include="Forme\PlaneteForma.Designer.cs">
+      <DependentUpon>PlaneteForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\SavezForma.cs">
       <SubType>Form</SubType>
@@ -186,7 +191,6 @@
     <Compile Include="Mapiranja\PojavaMapiranja.cs" />
     <Compile Include="Mapiranja\PosadaMapiranja.cs" />
     <Compile Include="Mapiranja\PrirodniSatelitMapiranja.cs" />
-    <Compile Include="Mapiranja\SatelitMapiranja.cs" />
     <Compile Include="Mapiranja\SavezMapiranja.cs" />
     <Compile Include="Mapiranja\SpisakOruzjaMapiranja.cs" />
     <Compile Include="Mapiranja\SvemirskaStanicaMapiranja.cs" />
@@ -203,6 +207,9 @@
     <EmbeddedResource Include="Forme\GakaksijaForma.resx">
       <DependentUpon>GakaksijaForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijaDodajForma.resx">
+      <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\IgracForma.resx">
       <DependentUpon>IgracForma.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,8 +219,8 @@
     <EmbeddedResource Include="Forme\OsvojiPlanetu.resx">
       <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Planete.resx">
-      <DependentUpon>Planete.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\PlaneteForma.resx">
+      <DependentUpon>PlaneteForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\SavezForma.resx">
       <DependentUpon>SavezForma.cs</DependentUpon>

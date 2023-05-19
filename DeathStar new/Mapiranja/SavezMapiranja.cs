@@ -1,4 +1,4 @@
-﻿using DeathStar.Entiteti;
+﻿using DeathStar_new.Entiteti;
 using FluentNHibernate.Mapping;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeathStar.Mapiranja
+namespace DeathStar_new.Mapiranja
 {
     internal class SavezMapiranja : ClassMap<Savez>
     {
@@ -15,10 +15,9 @@ namespace DeathStar.Mapiranja
             Table("SAVEZ");
 
             Id(x => x.Naziv, "NAZIV").GeneratedBy.Assigned();
-
             Map(x => x.DatumFormiranja, "DATUM_FORMIRANJA");
-
-            References(x => x.SavezDeo, "SAVEZ_DEO").LazyLoad();
+            References(x => x.DeoSaveza, "NAZIVS").LazyLoad();
+            References(x => x.DeoPosade, "POSADAID").LazyLoad();
 
             HasMany(x => x.Savezi)
                 .KeyColumn("SAVEZ_DEO")
@@ -26,15 +25,11 @@ namespace DeathStar.Mapiranja
                 .Cascade.All()
                 .Inverse();
                 
-
            HasMany(x => x.Igraci)
                 .KeyColumn("SAVEZ")
                 .LazyLoad()
                 .Cascade.All()
                 .Inverse();
-                
-
-            //References(x => x.PosadaDeo, "POSADA_DEO").LazyLoad();
         }
     }
 }
