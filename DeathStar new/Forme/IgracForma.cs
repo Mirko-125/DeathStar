@@ -26,5 +26,29 @@ namespace DeathStar_new.Forme
         {
 
         }
+        public void popuniTabeluIgraca()
+        {
+            listaIgraca.Items.Clear();
+            List<IgracPregled> igraci = DTOManager.vratiSveIgrace();
+            foreach(IgracPregled i in igraci)
+            {
+                ListViewItem listViewItem = new ListViewItem(new string[]
+                {
+                    i.username,
+                    i.ime,
+                    i.prezime,
+                    i.pol,
+                    i.drzava,
+                    i.datumRodjenja.ToString(),
+                    i.datumOtvaranjaNaloga.ToString(),
+                    i.email,
+                    i.urlAvatara,
+                    i.opis
+                }) ;
+                listaIgraca.Items.Add(listViewItem);
+            }
+            listaIgraca.Refresh();
+        }
+
     }
 }

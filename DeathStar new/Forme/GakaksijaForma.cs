@@ -88,12 +88,8 @@ namespace DeathStar_new.Forme
             }
 
             string nazivGalaksije = listaGalaksija.SelectedItems[0].SubItems[0].Text;
-            string poruka = "Da li zelite da obrisete izabranu galaksiju?";
-            string title = "Pitanje";
-            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
-            DialogResult result = MessageBox.Show(poruka, title, buttons);
-
-            if (result == DialogResult.OK)
+         
+            if (DTOManager.confirmMessage("izabranu galaksiju") == DialogResult.OK)
             {
                 DTOManager.obrisiGalaksiju(nazivGalaksije);
                 MessageBox.Show("Brisanje galaksije je uspesno obavljeno!");
@@ -103,6 +99,11 @@ namespace DeathStar_new.Forme
             {
 
             }
+        }
+
+        private void listaGalaksija_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

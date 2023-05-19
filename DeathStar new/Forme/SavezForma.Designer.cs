@@ -35,6 +35,8 @@
             this.Prikazi_Clanove_Saveza = new System.Windows.Forms.Button();
             this.Pridruzi_Savez = new System.Windows.Forms.Button();
             this.Dodaj_Savez = new System.Windows.Forms.Button();
+            this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum_formiranja = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -42,6 +44,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(584, 426);
@@ -51,18 +54,26 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Naziv,
+            this.Datum_formiranja});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(7, 21);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(560, 399);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Prikazi_Clanove_Saveza);
             this.groupBox2.Controls.Add(this.Pridruzi_Savez);
             this.groupBox2.Controls.Add(this.Dodaj_Savez);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(603, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(185, 425);
@@ -73,6 +84,7 @@
             // 
             // Prikazi_Clanove_Saveza
             // 
+            this.Prikazi_Clanove_Saveza.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Prikazi_Clanove_Saveza.Location = new System.Drawing.Point(7, 80);
             this.Prikazi_Clanove_Saveza.Name = "Prikazi_Clanove_Saveza";
             this.Prikazi_Clanove_Saveza.Size = new System.Drawing.Size(172, 23);
@@ -82,6 +94,7 @@
             // 
             // Pridruzi_Savez
             // 
+            this.Pridruzi_Savez.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Pridruzi_Savez.Location = new System.Drawing.Point(7, 50);
             this.Pridruzi_Savez.Name = "Pridruzi_Savez";
             this.Pridruzi_Savez.Size = new System.Drawing.Size(172, 23);
@@ -91,6 +104,7 @@
             // 
             // Dodaj_Savez
             // 
+            this.Dodaj_Savez.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Dodaj_Savez.Location = new System.Drawing.Point(7, 20);
             this.Dodaj_Savez.Name = "Dodaj_Savez";
             this.Dodaj_Savez.Size = new System.Drawing.Size(172, 23);
@@ -98,10 +112,21 @@
             this.Dodaj_Savez.Text = "Dodaj savez";
             this.Dodaj_Savez.UseVisualStyleBackColor = true;
             // 
+            // Naziv
+            // 
+            this.Naziv.Text = "Naziv";
+            this.Naziv.Width = 290;
+            // 
+            // Datum_formiranja
+            // 
+            this.Datum_formiranja.Text = "Datum formiranja";
+            this.Datum_formiranja.Width = 267;
+            // 
             // SavezForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -122,5 +147,7 @@
         private System.Windows.Forms.Button Pridruzi_Savez;
         private System.Windows.Forms.Button Dodaj_Savez;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Naziv;
+        private System.Windows.Forms.ColumnHeader Datum_formiranja;
     }
 }

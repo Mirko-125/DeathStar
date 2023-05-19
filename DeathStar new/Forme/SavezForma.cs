@@ -21,5 +21,10 @@ namespace DeathStar_new.Forme
         {
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

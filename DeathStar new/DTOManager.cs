@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DeathStar_new
 {
@@ -149,5 +150,40 @@ namespace DeathStar_new
             return planete;
         }
         #endregion
+        #region Igrac
+        public static List<IgracPregled> vratiSveIgrace()
+        {
+            List<IgracPregled> igraci = new List<IgracPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Igrac> sviIgraci = from o in s.Query<Igrac>()
+                                       select o;
+
+                foreach (Igrac i in sviIgraci)
+                {
+                    igraci.Add(new IgracPregled(i.Username, i.Ime, i.Prezime, i.Pol, i.Drzava,i.DatumOtvaranjaNaloga,i.DatumRodjenja,i.Email,i.URLAvatara,i.Opis));
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return igraci;
+        }
+        #endregion
+
+        public static DialogResult confirmMessage(string izabranoTelo)
+        {
+            string poruka = "Da li zelite da obrisete " + izabranoTelo;
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+            return result;
+        }
     }
 }

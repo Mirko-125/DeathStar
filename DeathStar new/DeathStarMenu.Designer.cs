@@ -45,7 +45,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Location = new System.Drawing.Point(64, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(350, 197);
@@ -132,6 +132,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeathStarMenu";
             this.Text = "DeathStarMenu";
