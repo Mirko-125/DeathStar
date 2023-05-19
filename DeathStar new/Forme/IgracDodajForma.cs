@@ -41,6 +41,7 @@ namespace DeathStar_new.Forme
             {
                 this.igrac.pol = "musko";
             }
+            // moram da izvucem kljuc od planete
             this.igrac.drzava = drzava.Text;
             this.igrac.datumRodjenja = dateTimePicker1.Value;
             this.igrac.datumOtvaranjaNaloga = dateTimePicker2.Value;
