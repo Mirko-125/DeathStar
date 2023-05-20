@@ -52,11 +52,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.idPlanete = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.idPlanete);
             this.groupBox1.Controls.Add(this.dodaj);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -277,6 +281,23 @@
             this.label1.Text = "Username";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // idPlanete
+            // 
+            this.idPlanete.Location = new System.Drawing.Point(80, 198);
+            this.idPlanete.Name = "idPlanete";
+            this.idPlanete.Size = new System.Drawing.Size(100, 20);
+            this.idPlanete.TabIndex = 24;
+            this.idPlanete.TextChanged += new System.EventHandler(this.idPlanete_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 201);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "ID planete";
+            // 
             // IgracDodajForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,5 +339,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button dodaj;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox idPlanete;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DeathStar_new.Forme
 {
@@ -41,13 +42,14 @@ namespace DeathStar_new.Forme
             {
                 this.igrac.pol = "musko";
             }
-            // moram da izvucem kljuc od planete
+            
             this.igrac.drzava = drzava.Text;
             this.igrac.datumRodjenja = dateTimePicker1.Value;
             this.igrac.datumOtvaranjaNaloga = dateTimePicker2.Value;
             this.igrac.email = email.Text;
             this.igrac.urlAvatara = urlavatar.Text;
             this.igrac.opis = richTextBox1.Text;
+            //this.igrac.maticnaPlaneta = 
             DTOManager.dodajIgraca(this.igrac);
             MessageBox.Show("Uspesno dodat igrac");
             this.Close();
@@ -55,6 +57,11 @@ namespace DeathStar_new.Forme
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idPlanete_TextChanged(object sender, EventArgs e)
         {
 
         }
