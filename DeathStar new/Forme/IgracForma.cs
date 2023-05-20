@@ -72,9 +72,9 @@ namespace DeathStar_new.Forme
 
             string usernameX = listaIgraca.SelectedItems[0].SubItems[0].Text;
 
-            if (DTOManager.confirmMessage("izabranog igrača") == DialogResult.OK)
+            if (DTOManager.confirmMessage("izabranog igraca") == DialogResult.OK)
             {
-                DTOManager.obrisiIgraca(usernameX);
+                DTOManager.obrisiGalaksiju(usernameX);
                 MessageBox.Show(usernameX + " is no more");
                 this.popuniTabeluIgraca();
             }

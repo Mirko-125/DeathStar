@@ -91,9 +91,9 @@ namespace DeathStar_new
 
                 Galaksija galaksija = s.Load<Galaksija>(naziv);
                 galaksijaBasic = new GalaksijaBasic(galaksija.Naziv,
-                    galaksija.ProcenjenBrojZvezda,
-                    galaksija.ProcenjenBrojPlaneta,
-                    galaksija.DominantnaRasa);
+                galaksija.ProcenjenBrojZvezda,
+                galaksija.ProcenjenBrojPlaneta,
+                galaksija.DominantnaRasa);
             }
             catch (Exception ec)
             {
@@ -176,24 +176,26 @@ namespace DeathStar_new
             return igraci;
         }
 
-        public static void dodajIgraca(IgracBasic i)
+        public static void dodajIgraca(IgracBasic i, int id)
         {
             try
             {
                 ISession s = DataLayer.GetSession();
 
                 Igrac o = new Igrac();
+                Planeta p = s.Load<Planeta>(id);
 
-                o.Username = i.username;
                 o.Ime = i.ime;
                 o.Prezime = i.prezime;
                 o.Pol = i.pol;
-                o.Drzava = i.drzava;
-                o.DatumRodjenja = i.datumRodjenja;
                 o.Email = i.email;
-                o.URLAvatara = i.urlAvatara;
                 o.Opis = i.opis;
-
+                o.URLAvatara = i.urlAvatara;
+                o.DatumRodjenja = i.datumRodjenja;
+                o.DatumOtvaranjaNaloga = i.datumOtvaranjaNaloga;
+                o.Drzava = i.drzava;
+                o.MaticnaPlaneta = p;
+                o.Username = i.username;
                 s.SaveOrUpdate(o);
 
                 s.Flush();
@@ -222,8 +224,38 @@ namespace DeathStar_new
             {
                 new InnerExceptionHandler().handle(ec);
             }
-
         }
+        /*public static IgracBasic vratiIgraca(string naziv)
+        {
+            IgracBasic igracBasic = new IgracBasic();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                
+                o.Ime = i.ime;
+                o.Prezime = i.prezime;
+                o.Pol = i.pol;
+                o.Email = i.email;
+                o.Opis = i.opis;
+                o.URLAvatara = i.urlAvatara;
+                o.DatumRodjenja = i.datumRodjenja;
+                o.DatumOtvaranjaNaloga = i.datumOtvaranjaNaloga;
+                o.Drzava = i.drzava;
+                o.MaticnaPlaneta = p;
+                o.Username = i.username;
+                s.SaveOrUpdate(o);   
+                
+                Igrac igrac = s.Load<Igrac>(naziv);
+                igracBasic = new IgracBasic(igrac.Username, igrac.Ime, igrac.Prezime, igrac.Pol, igrac.Drzava, igrac.DatumOtvaranjaNaloga, igrac.DatumRodjenja, igrac.Email, igrac.URLAvatara, igrac.Opis, igrac.DeoPosade, igrac.MaticnaPlaneta, igrac.DeoSaveza);
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return igracBasic;
+        }
+        */
         #endregion
 
         public static DialogResult confirmMessage(string izabranoTelo)
