@@ -205,6 +205,25 @@ namespace DeathStar_new
                 new InnerExceptionHandler().handle(ec);
             }
         }
+
+        public static void obrisiIgraca(string naziv)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Igrac o = s.Load<Igrac>(naziv);
+
+                s.Delete(o);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+        }
         #endregion
 
         public static DialogResult confirmMessage(string izabranoTelo)

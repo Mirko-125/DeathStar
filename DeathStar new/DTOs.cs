@@ -262,6 +262,27 @@ namespace DeathStar_new
             this.deoPosade = deoPosade;
             this.maticnaPlaneta = maticnaPlaneta;
             this.savezKomePripada = savezKomePripada;
+
+            /*
+             AutomobilBasic a = new AutomobilBasic();
+            a.Tip = "AUTOMOBILI";
+            a.Naziv = txbNaziv.Text;
+            a.Proizvodjac = txbProizvodjac.Text;
+            a.NazivSerije = txbNazivSerije.Text;
+
+            if (chbBaterije.Checked == true)
+                a.Baterije = "Da";
+            else
+                a.Baterije = "Ne";
+
+            DTOManager.sacuvajAutomobil(a);
+            ProdajeSeBasic prodaja = new ProdajeSeBasic();
+            prodaja.ProdajeOdeljenje = odeljenje;
+            prodaja.ProdajeProzivod=DTOManager.vratiSveProizvodeBasic().OrderByDescending(item => item.BarKod).First();
+            DTOManager.sacuvajProdajeSe(prodaja);
+            MessageBox.Show("Uspesno ste dodali igracku automobil!");
+            this.Close();
+             */
         }
     }
     public class IgracPregled

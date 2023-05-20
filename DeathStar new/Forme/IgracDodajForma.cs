@@ -31,6 +31,7 @@ namespace DeathStar_new.Forme
 
         private void dodaj_Click(object sender, EventArgs e)
         {
+            PlanetaBasic maticna_planeta= new PlanetaBasic();
             this.igrac.username = username.Text;
             this.igrac.ime = ime.Text;
             this.igrac.prezime = prezime.Text;
@@ -42,14 +43,15 @@ namespace DeathStar_new.Forme
             {
                 this.igrac.pol = "musko";
             }
-            
+            //REDOSLED!
             this.igrac.drzava = drzava.Text;
-            this.igrac.datumRodjenja = dateTimePicker1.Value;
             this.igrac.datumOtvaranjaNaloga = dateTimePicker2.Value;
+            this.igrac.datumRodjenja = dateTimePicker1.Value;
             this.igrac.email = email.Text;
             this.igrac.urlAvatara = urlavatar.Text;
             this.igrac.opis = richTextBox1.Text;
-            //this.igrac.maticnaPlaneta = 
+            maticna_planeta.idPlanete = Int32.Parse(idPlanete.Text);
+            this.igrac.maticnaPlaneta = maticna_planeta;
             DTOManager.dodajIgraca(this.igrac);
             MessageBox.Show("Uspesno dodat igrac");
             this.Close();
@@ -62,6 +64,11 @@ namespace DeathStar_new.Forme
         }
 
         private void idPlanete_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prezime_TextChanged(object sender, EventArgs e)
         {
 
         }

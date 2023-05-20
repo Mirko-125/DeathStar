@@ -61,5 +61,27 @@ namespace DeathStar_new.Forme
             formaDodaj.ShowDialog();
             this.popuniTabeluIgraca();
         }
+
+        private void Obrisi_Igraca_Click(object sender, EventArgs e)
+        {
+            if (listaIgraca.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite galaksiju koju zelite da obrisete!");
+                return;
+            }
+
+            string usernameX = listaIgraca.SelectedItems[0].SubItems[0].Text;
+
+            if (DTOManager.confirmMessage("izabranog igrača") == DialogResult.OK)
+            {
+                DTOManager.obrisiIgraca(usernameX);
+                MessageBox.Show(usernameX + " is no more");
+                this.popuniTabeluIgraca();
+            }
+            else
+            {
+
+            }
+        }
     }
 }

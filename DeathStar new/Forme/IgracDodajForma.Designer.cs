@@ -166,6 +166,7 @@
             this.prezime.Name = "prezime";
             this.prezime.Size = new System.Drawing.Size(100, 20);
             this.prezime.TabIndex = 15;
+            this.prezime.TextChanged += new System.EventHandler(this.prezime_TextChanged);
             // 
             // urlavatar
             // 

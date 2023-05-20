@@ -47,6 +47,7 @@
             this.Dodaj_Igraca = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Izaberi_Posadu = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -170,6 +171,7 @@
             this.Obrisi_Igraca.TabIndex = 1;
             this.Obrisi_Igraca.Text = "Obriši igrača";
             this.Obrisi_Igraca.UseVisualStyleBackColor = true;
+            this.Obrisi_Igraca.Click += new System.EventHandler(this.Obrisi_Igraca_Click);
             // 
             // Dodaj_Igraca
             // 
@@ -244,5 +246,6 @@
         private System.Windows.Forms.ColumnHeader Email;
         private System.Windows.Forms.ColumnHeader URL_Avatara;
         private System.Windows.Forms.ColumnHeader Opis;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
