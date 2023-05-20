@@ -161,6 +161,7 @@
             this.Izmeni_Igraca.TabIndex = 2;
             this.Izmeni_Igraca.Text = "Izmeni igrača";
             this.Izmeni_Igraca.UseVisualStyleBackColor = true;
+            this.Izmeni_Igraca.Click += new System.EventHandler(this.Izmeni_Igraca_Click);
             // 
             // Obrisi_Igraca
             // 

@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SavezForma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listaSaveza = new System.Windows.Forms.ListView();
+            this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Datum_formiranja = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Prikazi_Clanove_Saveza = new System.Windows.Forms.Button();
             this.Pridruzi_Savez = new System.Windows.Forms.Button();
             this.Dodaj_Savez = new System.Windows.Forms.Button();
-            this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Datum_formiranja = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.listaSaveza);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -52,21 +52,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Svi savezi";
             // 
-            // listView1
+            // listaSaveza
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listaSaveza.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Naziv,
             this.Datum_formiranja});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(7, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(560, 399);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listaSaveza.FullRowSelect = true;
+            this.listaSaveza.GridLines = true;
+            this.listaSaveza.HideSelection = false;
+            this.listaSaveza.Location = new System.Drawing.Point(7, 21);
+            this.listaSaveza.Name = "listaSaveza";
+            this.listaSaveza.Size = new System.Drawing.Size(560, 399);
+            this.listaSaveza.TabIndex = 0;
+            this.listaSaveza.UseCompatibleStateImageBehavior = false;
+            this.listaSaveza.View = System.Windows.Forms.View.Details;
+            this.listaSaveza.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // Naziv
+            // 
+            this.Naziv.Text = "Naziv";
+            this.Naziv.Width = 290;
+            // 
+            // Datum_formiranja
+            // 
+            this.Datum_formiranja.Text = "Datum formiranja";
+            this.Datum_formiranja.Width = 267;
             // 
             // groupBox2
             // 
@@ -101,6 +111,7 @@
             this.Pridruzi_Savez.TabIndex = 1;
             this.Pridruzi_Savez.Text = "Pridruzi savez";
             this.Pridruzi_Savez.UseVisualStyleBackColor = true;
+            this.Pridruzi_Savez.Click += new System.EventHandler(this.Pridruzi_Savez_Click);
             // 
             // Dodaj_Savez
             // 
@@ -111,16 +122,7 @@
             this.Dodaj_Savez.TabIndex = 0;
             this.Dodaj_Savez.Text = "Dodaj savez";
             this.Dodaj_Savez.UseVisualStyleBackColor = true;
-            // 
-            // Naziv
-            // 
-            this.Naziv.Text = "Naziv";
-            this.Naziv.Width = 290;
-            // 
-            // Datum_formiranja
-            // 
-            this.Datum_formiranja.Text = "Datum formiranja";
-            this.Datum_formiranja.Width = 267;
+            this.Dodaj_Savez.Click += new System.EventHandler(this.Dodaj_Savez_Click);
             // 
             // SavezForma
             // 
@@ -146,7 +148,7 @@
         private System.Windows.Forms.Button Prikazi_Clanove_Saveza;
         private System.Windows.Forms.Button Pridruzi_Savez;
         private System.Windows.Forms.Button Dodaj_Savez;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listaSaveza;
         private System.Windows.Forms.ColumnHeader Naziv;
         private System.Windows.Forms.ColumnHeader Datum_formiranja;
     }

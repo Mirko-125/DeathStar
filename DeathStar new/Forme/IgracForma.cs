@@ -83,5 +83,12 @@ namespace DeathStar_new.Forme
 
             }
         }
+
+        private void Izmeni_Igraca_Click(object sender, EventArgs e)
+        {
+            IgracIzmeniForma formaIzmeni = new IgracIzmeniForma();
+            formaIzmeni.ShowDialog();
+            this.popuniTabeluIgraca();
+        }
     }
 }

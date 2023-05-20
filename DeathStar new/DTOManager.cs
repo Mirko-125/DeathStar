@@ -257,7 +257,51 @@ namespace DeathStar_new
         }
         */
         #endregion
+        #region Savez
+        public static void dodajSavez(SavezBasic u)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
 
+                Savez un = new Savez();
+
+                un.Naziv = u.naziv;
+                un.DatumFormiranja = u.datumFormiranja;
+
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+        }
+        public static List<SavezPregled> vratiSveSaveze()
+        {
+            List<SavezPregled> savezi = new List<SavezPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                IEnumerable<Savez> sviSavezi = from o in s.Query<Savez>()
+                                          select o;
+
+                foreach (Savez u in sviSavezi)
+                {
+                    savezi.Add(new SavezPregled(u.Naziv, u.DatumFormiranja));
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return savezi;
+        }
+        #endregion
         public static DialogResult confirmMessage(string izabranoTelo)
         {
             string poruka = "Da li zelite da obrisete " + izabranoTelo;

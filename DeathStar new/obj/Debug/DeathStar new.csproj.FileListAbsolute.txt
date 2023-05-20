@@ -149,3 +149,7 @@ C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracIzmeniForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.ClanoviSavezaForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezPridruziForma.resources
