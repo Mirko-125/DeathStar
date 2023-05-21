@@ -26,8 +26,7 @@ namespace DeathStar_new.Mapiranja
             Map(x => x.Drzava).Column("DRZAVA");
 
             References(x => x.DeoSaveza, "NAZIVS").LazyLoad();
-            References(x => x.MaticnaPlaneta, "IDP").LazyLoad();
-
+            References(x => x.MaticnaPlaneta, "IDP").LazyLoad().Unique();
             References(x => x.DeoPosade, "POSADAID").LazyLoad();
 
             HasMany(x => x.PosedujePlanete)

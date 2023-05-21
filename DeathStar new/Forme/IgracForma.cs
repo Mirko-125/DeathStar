@@ -74,13 +74,13 @@ namespace DeathStar_new.Forme
 
             if (DTOManager.confirmMessage("izabranog igraca") == DialogResult.OK)
             {
-                DTOManager.obrisiGalaksiju(usernameX);
+                DTOManager.obrisiIgraca(usernameX);
                 MessageBox.Show(usernameX + " is no more");
                 this.popuniTabeluIgraca();
             }
             else
             {
-
+                MessageBox.Show("Greska prilikom brisanja " + usernameX);
             }
         }
 

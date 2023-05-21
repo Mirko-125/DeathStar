@@ -14,7 +14,7 @@ namespace DeathStar_new.Mapiranja
         {
             Table("KVADRANT");
 
-            Id(x => x.RedniBroj, "REDNI_BROJ").GeneratedBy.Identity();
+            Id(x => x.RedniBroj, "REDNI_BROJ").GeneratedBy.TriggerIdentity();
             Map(x => x.ProcenjeniPrecnik).Column("PROCENJENI_PRECNIK");
             References(x => x.DeoGalaksije).Column("NAZIVG").LazyLoad();
         }

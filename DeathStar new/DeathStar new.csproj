@@ -130,11 +130,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\ClanoviSavezaForma.cs">
+    <Compile Include="Forme\BrodoviForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\ClanoviSavezaForma.Designer.cs">
-      <DependentUpon>ClanoviSavezaForma.cs</DependentUpon>
+    <Compile Include="Forme\BrodoviForma.Designer.cs">
+      <DependentUpon>BrodoviForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\GakaksijaForma.cs">
       <SubType>Form</SubType>
@@ -147,6 +147,12 @@
     </Compile>
     <Compile Include="Forme\GalaksijaDodajForma.Designer.cs">
       <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijaIzmeniForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijaIzmeniForma.Designer.cs">
+      <DependentUpon>GalaksijaIzmeniForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\IgracDodajForma.cs">
       <SubType>Form</SubType>
@@ -166,11 +172,17 @@
     <Compile Include="Forme\IgracIzmeniForma.Designer.cs">
       <DependentUpon>IgracIzmeniForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\KonstrukcijaBroda.cs">
+    <Compile Include="Forme\KonstrukcijaBrodaForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\KonstrukcijaBroda.Designer.cs">
-      <DependentUpon>KonstrukcijaBroda.cs</DependentUpon>
+    <Compile Include="Forme\KonstrukcijaBrodaForma.Designer.cs">
+      <DependentUpon>KonstrukcijaBrodaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KvadrantiForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KvadrantiForma.Designer.cs">
+      <DependentUpon>KvadrantiForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\OsvojiPlanetu.cs">
       <SubType>Form</SubType>
@@ -234,14 +246,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\ClanoviSavezaForma.resx">
-      <DependentUpon>ClanoviSavezaForma.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\BrodoviForma.resx">
+      <DependentUpon>BrodoviForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\GakaksijaForma.resx">
       <DependentUpon>GakaksijaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\GalaksijaDodajForma.resx">
       <DependentUpon>GalaksijaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijaIzmeniForma.resx">
+      <DependentUpon>GalaksijaIzmeniForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\IgracDodajForma.resx">
       <DependentUpon>IgracDodajForma.cs</DependentUpon>
@@ -252,8 +267,11 @@
     <EmbeddedResource Include="Forme\IgracIzmeniForma.resx">
       <DependentUpon>IgracIzmeniForma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\KonstrukcijaBroda.resx">
-      <DependentUpon>KonstrukcijaBroda.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\KonstrukcijaBrodaForma.resx">
+      <DependentUpon>KonstrukcijaBrodaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KvadrantiForma.resx">
+      <DependentUpon>KvadrantiForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\OsvojiPlanetu.resx">
       <DependentUpon>OsvojiPlanetu.cs</DependentUpon>

@@ -13,7 +13,7 @@ namespace DeathStar_new.Mapiranja
         public BrodMapiranja()
         {
             UseUnionSubclassForInheritanceMapping();
-            Id(x => x.JedinstveniBroj, "JEDINSTVENI_BROJ").GeneratedBy.Identity();
+            Id(x => x.JedinstveniBroj, "JEDINSTVENI_BROJ").GeneratedBy.SequenceIdentity("S19040.SHARED_JEDINSTVENI_BROJ_SEQ");
 
             Map(x => x.Naziv, "NAZIV");
             Map(x => x.MaxWarpBrzina, "MAKSIMALNA_WARP_BRZINA");

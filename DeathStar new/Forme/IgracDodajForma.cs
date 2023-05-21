@@ -47,9 +47,8 @@ namespace DeathStar_new.Forme
             this.igrac.datumRodjenja = dateTimePicker1.Value;
             this.igrac.datumOtvaranjaNaloga = dateTimePicker2.Value;
             this.igrac.drzava = drzava.Text;
-            int id = Int32.Parse(idPlanete.Text);
             this.igrac.username = username.Text;
-            DTOManager.dodajIgraca(this.igrac, id);
+            DTOManager.dodajIgraca(this.igrac);
             MessageBox.Show("Uspesno dodat igrac");
             this.Close();
 
@@ -66,6 +65,11 @@ namespace DeathStar_new.Forme
         }
 
         private void prezime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IgracDodajForma_Load(object sender, EventArgs e)
         {
 
         }

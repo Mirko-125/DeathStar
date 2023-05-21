@@ -40,10 +40,5 @@ namespace DeathStar_new.Forme
             MessageBox.Show("Uspesno dodata galaksija");
             this.Close();
         }
-
-        private void textNaziv_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

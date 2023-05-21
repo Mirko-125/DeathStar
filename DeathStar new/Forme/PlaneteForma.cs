@@ -58,5 +58,18 @@ namespace DeathStar_new.Forme
             }
             this.listaPlaneta.Refresh();
         }
+
+        private void prikaziBrodove_Click(object sender, EventArgs e)
+        {
+            if (listaPlaneta.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite planetu cije brodove zelite da vidite!");
+                return;
+            }
+            int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
+            string naziv = listaPlaneta.SelectedItems[0].SubItems[1].Text;
+            BrodoviForma brodoviForma = new BrodoviForma(naziv, id);
+            brodoviForma.ShowDialog();
+        }
     }
 }

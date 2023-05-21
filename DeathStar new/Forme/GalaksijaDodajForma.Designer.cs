@@ -44,29 +44,28 @@
             // 
             // textNaziv
             // 
-            this.textNaziv.Location = new System.Drawing.Point(127, 28);
+            this.textNaziv.Location = new System.Drawing.Point(109, 28);
             this.textNaziv.Name = "textNaziv";
             this.textNaziv.Size = new System.Drawing.Size(121, 20);
             this.textNaziv.TabIndex = 0;
-            this.textNaziv.TextChanged += new System.EventHandler(this.textNaziv_TextChanged);
             // 
             // textBrojPlaneta
             // 
-            this.textBrojPlaneta.Location = new System.Drawing.Point(127, 56);
+            this.textBrojPlaneta.Location = new System.Drawing.Point(109, 56);
             this.textBrojPlaneta.Name = "textBrojPlaneta";
             this.textBrojPlaneta.Size = new System.Drawing.Size(121, 20);
             this.textBrojPlaneta.TabIndex = 1;
             // 
             // textBrojZvezda
             // 
-            this.textBrojZvezda.Location = new System.Drawing.Point(127, 84);
+            this.textBrojZvezda.Location = new System.Drawing.Point(109, 84);
             this.textBrojZvezda.Name = "textBrojZvezda";
             this.textBrojZvezda.Size = new System.Drawing.Size(121, 20);
             this.textBrojZvezda.TabIndex = 2;
             // 
             // textDominatnaRasa
             // 
-            this.textDominatnaRasa.Location = new System.Drawing.Point(127, 112);
+            this.textDominatnaRasa.Location = new System.Drawing.Point(109, 112);
             this.textDominatnaRasa.Name = "textDominatnaRasa";
             this.textDominatnaRasa.Size = new System.Drawing.Size(121, 20);
             this.textDominatnaRasa.TabIndex = 4;
@@ -122,9 +121,9 @@
             this.Podaci.Controls.Add(this.textBrojPlaneta);
             this.Podaci.Controls.Add(this.textNaziv);
             this.Podaci.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Podaci.Location = new System.Drawing.Point(12, 24);
+            this.Podaci.Location = new System.Drawing.Point(12, 12);
             this.Podaci.Name = "Podaci";
-            this.Podaci.Size = new System.Drawing.Size(268, 147);
+            this.Podaci.Size = new System.Drawing.Size(249, 147);
             this.Podaci.TabIndex = 9;
             this.Podaci.TabStop = false;
             this.Podaci.Text = "Podaci";
@@ -132,12 +131,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(42, 186);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Consolas", 14F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(121, 178);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 28);
+            this.button1.Size = new System.Drawing.Size(140, 76);
             this.button1.TabIndex = 10;
             this.button1.Text = "Dodaj";
             this.button1.UseVisualStyleBackColor = false;
@@ -148,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(285, 251);
+            this.ClientSize = new System.Drawing.Size(282, 266);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Podaci);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

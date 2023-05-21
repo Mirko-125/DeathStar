@@ -13,17 +13,17 @@ namespace DeathStar_new
         public int jedinstveniBroj;
         public string naziv;
         public double maxWarpBrzina;
-        public PlanetaBasic platenaKonstrukcije;
+        public PlanetaBasic planetaKonstrukcije;
         public PosadaBasic posadaKojuPoseduje;
 
         public BrodBasic() { }
 
-        public BrodBasic(int jedinstveniBroj, string naziv, double maxWarpBrzina, PlanetaBasic platenaKonstrukcije, PosadaBasic posadaKojuPoseduje)
+        public BrodBasic(int jedinstveniBroj, string naziv, double maxWarpBrzina, PlanetaBasic planetaKonstrukcije, PosadaBasic posadaKojuPoseduje)
         {
             this.jedinstveniBroj = jedinstveniBroj;
             this.naziv = naziv;
             this.maxWarpBrzina = maxWarpBrzina;
-            this.platenaKonstrukcije = platenaKonstrukcije;
+            this.planetaKonstrukcije = planetaKonstrukcije;
             this.posadaKojuPoseduje = posadaKojuPoseduje;
         }
     }
@@ -262,27 +262,6 @@ namespace DeathStar_new
             this.deoPosade = deoPosade;
             this.maticnaPlaneta = maticnaPlaneta;
             this.savezKomePripada = savezKomePripada;
-
-            /*
-             AutomobilBasic a = new AutomobilBasic();
-            a.Tip = "AUTOMOBILI";
-            a.Naziv = txbNaziv.Text;
-            a.Proizvodjac = txbProizvodjac.Text;
-            a.NazivSerije = txbNazivSerije.Text;
-
-            if (chbBaterije.Checked == true)
-                a.Baterije = "Da";
-            else
-                a.Baterije = "Ne";
-
-            DTOManager.sacuvajAutomobil(a);
-            ProdajeSeBasic prodaja = new ProdajeSeBasic();
-            prodaja.ProdajeOdeljenje = odeljenje;
-            prodaja.ProdajeProzivod=DTOManager.vratiSveProizvodeBasic().OrderByDescending(item => item.BarKod).First();
-            DTOManager.sacuvajProdajeSe(prodaja);
-            MessageBox.Show("Uspesno ste dodali igracku automobil!");
-            this.Close();
-             */
         }
     }
     public class IgracPregled
@@ -323,7 +302,7 @@ namespace DeathStar_new
         public int idPlanete;
         public string naziv;
         public string glavniGrad;
-        public int brojStanovnika;
+        public Int64 brojStanovnika;
         public string dominantnaRasa;
         public string drustvenoUredjenje;
         public string imeZvezdanogSistema;
@@ -353,7 +332,7 @@ namespace DeathStar_new
             brodovi = new List<BrodBasic>();
             pojave = new List<PojavaBasic>();
         }
-        public PlanetaBasic(int idPlanete, string naziv, string glavniGrad, int brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, string berilijum, string trilijum, string plutonijum, DateTime datumKolonizacije, PosadaBasic posadaOsvajaca, PosadaBasic posadaKolonista, IgracBasic igracMaticna, IgracBasic igracKojiPoseduje, GalaksijaBasic uGalaksiji)
+        public PlanetaBasic(int idPlanete, string naziv, string glavniGrad, Int64 brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, string berilijum, string trilijum, string plutonijum, DateTime datumKolonizacije, PosadaBasic posadaOsvajaca, PosadaBasic posadaKolonista, IgracBasic igracMaticna, IgracBasic igracKojiPoseduje, GalaksijaBasic uGalaksiji)
         {
             this.idPlanete = idPlanete;
             this.naziv = naziv;
@@ -393,7 +372,7 @@ namespace DeathStar_new
         public int idPlanete;
         public string naziv;
         public string glavniGrad;
-        public int brojStanovnika;
+        public Int64 brojStanovnika;
         public string dominantnaRasa;
         public string drustvenoUredjenje;
         public string imeZvezdanogSistema;
@@ -407,7 +386,7 @@ namespace DeathStar_new
         public DateTime datumKolonizacije;
 
         public PlanetaPregled() { }
-        public PlanetaPregled(int idPlanete, string naziv, string glavniGrad, int brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, string berilijum, string trilijum, string plutonijum, DateTime datumKolonizacije)
+        public PlanetaPregled(int idPlanete, string naziv, string glavniGrad, Int64 brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, string berilijum, string trilijum, string plutonijum, DateTime datumKolonizacije)
         {
             this.idPlanete = idPlanete;
             this.naziv = naziv;

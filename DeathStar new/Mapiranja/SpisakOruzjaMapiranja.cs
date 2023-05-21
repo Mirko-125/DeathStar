@@ -12,6 +12,7 @@ namespace DeathStar_new.Mapiranja
     {
         public SpisakOruzjaMapiranja()
         {
+            Table("SPISAK_ORUZJA_STANICE");
             CompositeId()
                 .KeyReference(x => x.Oruzja, "IDS")
                 .KeyProperty(x => x.Oruzje, "Oruzje");

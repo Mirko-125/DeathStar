@@ -55,5 +55,10 @@ namespace DeathStar_new.Forme
             savezPridruzi.ShowDialog();
             this.popuniTabeluSaveza();
         }
+
+        private void SavezForma_Load(object sender, EventArgs e)
+        {
+            popuniTabeluSaveza();
+        }
     }
 }

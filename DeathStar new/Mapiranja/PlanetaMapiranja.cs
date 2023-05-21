@@ -35,8 +35,12 @@ namespace DeathStar_new.Entiteti
             References(x => x.PosadaOsvajaca, "POSADAID").LazyLoad();
             References(x => x.IgracKojiJePoseduje, "USERNAMEI").LazyLoad();
 
+            HasOne(x => x.IgracMaticna)
+                .PropertyRef(x => x.MaticnaPlaneta)
+                .LazyLoad();
+
             HasMany(x => x.Gradovi)
-                .KeyColumn("IDP")
+                .KeyColumns.Add("IDP")
                 .LazyLoad()
                 .Cascade.All()
                 .Inverse();

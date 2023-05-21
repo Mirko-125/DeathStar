@@ -55,12 +55,14 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.prikaziBrodove = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.prikaziBrodove);
             this.groupBox2.Controls.Add(this.DodajGrad);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.UnistiPlanetu);
@@ -72,7 +74,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(1133, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(203, 274);
+            this.groupBox2.Size = new System.Drawing.Size(203, 308);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcije";
@@ -268,6 +270,17 @@
             this.columnHeader10.Text = "Datum Kolonizacije";
             this.columnHeader10.Width = 109;
             // 
+            // prikaziBrodove
+            // 
+            this.prikaziBrodove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.prikaziBrodove.Location = new System.Drawing.Point(7, 255);
+            this.prikaziBrodove.Name = "prikaziBrodove";
+            this.prikaziBrodove.Size = new System.Drawing.Size(190, 23);
+            this.prikaziBrodove.TabIndex = 8;
+            this.prikaziBrodove.Text = "Brodovi";
+            this.prikaziBrodove.UseVisualStyleBackColor = true;
+            this.prikaziBrodove.Click += new System.EventHandler(this.prikaziBrodove_Click);
+            // 
             // PlaneteForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,5 +326,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.Button prikaziBrodove;
     }
 }

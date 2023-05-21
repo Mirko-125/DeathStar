@@ -1,9 +1,11 @@
 ﻿using DeathStar_new;
 using DeathStar_new.Entiteti;
+using DeathStar_new.Forme;
 using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +14,8 @@ namespace DeathStar_new
 {
     internal class DTOManager
     {
+
+        
         #region Galaksija
         public static List<GalaksijaPregled> vratiSveGalaksije()
         {
@@ -91,9 +95,9 @@ namespace DeathStar_new
 
                 Galaksija galaksija = s.Load<Galaksija>(naziv);
                 galaksijaBasic = new GalaksijaBasic(galaksija.Naziv,
-                galaksija.ProcenjenBrojZvezda,
-                galaksija.ProcenjenBrojPlaneta,
-                galaksija.DominantnaRasa);
+                    galaksija.ProcenjenBrojZvezda,
+                    galaksija.ProcenjenBrojPlaneta,
+                    galaksija.DominantnaRasa);
             }
             catch (Exception ec)
             {
@@ -149,6 +153,249 @@ namespace DeathStar_new
 
             return planete;
         }
+
+        /*public static PlanetaBasic vratiPlanetu(int id)
+        {
+            try
+            {
+                PlanetaBasic planetaBasic= new PlanetaBasic();
+                try
+                {
+                    ISession s = DataLayer.GetSession();
+
+                    Planeta planeta = s.Load<Planeta>(id);
+                    planetaBasic = new PlanetaBasic(planeta.Id)
+                    galaksijaBasic = new GalaksijaBasic(galaksija.Naziv,
+                        galaksija.ProcenjenBrojZvezda,
+                        galaksija.ProcenjenBrojPlaneta,
+                        galaksija.DominantnaRasa);
+                }
+                catch (Exception ec)
+                {
+                    new InnerExceptionHandler().handle(ec);
+                }
+
+                return galaksijaBasic;
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+            return planeta;
+        }*/
+        #endregion
+
+        #region Kvadranti
+        public static List<KvadrantPregled>vratiSveKvadranteGalaksije(string nazivG)
+        {
+            List<KvadrantPregled> kvadranti = new List<KvadrantPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Galaksija galaksija = s.Load<Galaksija>(nazivG);
+
+                IEnumerable<Kvadrant> sviKvadranti = from k in s.Query<Kvadrant>()
+                                                     where k.DeoGalaksije == galaksija
+                                                     select k;
+
+                foreach (Kvadrant kvadrant in sviKvadranti)
+                {
+                    kvadranti.Add(new KvadrantPregled
+                    {
+                        redniBroj = kvadrant.RedniBroj,
+                        procenjeniPrecnik = kvadrant.ProcenjeniPrecnik
+                    });
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return kvadranti;
+        }
+
+        public static void obrisiKvadrant(int id)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Kvadrant o = s.Load<Kvadrant>(id);
+
+                s.Delete(o);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+        }
+
+        public static bool dodajKvadrant(int precnik, string nazivG)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Galaksija galaksija = s.Load<Galaksija>(nazivG);
+                Kvadrant kvadrant = new Kvadrant();
+                kvadrant.ProcenjeniPrecnik = precnik;
+                kvadrant.DeoGalaksije = galaksija;
+
+                s.Save(kvadrant);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+
+        }
+
+        public static bool izmeniKvadrant(int id, int precnik)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Kvadrant kvadrant = s.Load<Kvadrant>(id);
+                kvadrant.ProcenjeniPrecnik = precnik;
+
+                s.Update(kvadrant);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+        #region Brodovi
+        public static List<BrodPregled> vratiSveBrodovePlanete(int idPlanete, string tip)
+        {
+            List<BrodPregled> brodovi= new List<BrodPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                IEnumerable<Brod> sviBrodovi;
+                if(tip == "borbeni")
+                {
+                    sviBrodovi = from b in s.Query<BorbeniBrod>()
+                                 where b.PlanetaKonstrukcije == planeta
+                                 select b;
+                    foreach (BorbeniBrod brod in sviBrodovi)
+                    {
+                        brodovi.Add(new BorbeniBrodPregled(
+                            brod.JedinstveniBroj,
+                            brod.Naziv,
+                            brod.MaxWarpBrzina,
+                            brod.FotonskoTorpedo,
+                            brod.BrojLaserskihTopova,
+                            brod.Tip
+                        ));
+                    }
+                }
+                else
+                {
+                    sviBrodovi = from b in s.Query<TransportniBrod>()
+                                 where b.PlanetaKonstrukcije == planeta
+                                 select b;
+                    foreach (TransportniBrod brod in sviBrodovi)
+                    {
+                        brodovi.Add(new TransportniBrodPregled(
+                                 brod.JedinstveniBroj,
+                                 brod.Naziv,
+                                 brod.MaxWarpBrzina,
+                                 brod.ZastitnaOtplata,
+                                 brod.Nosivost
+                             ));
+                    }
+                }            
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return brodovi;
+
+        }
+
+        public static bool dodajBrod(BorbeniBrodBasic br, int idPosade, int idPlanete)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                BorbeniBrod brod = new BorbeniBrod();
+                Posada posada = s.Load<Posada>(idPosade);
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                brod.Naziv = br.naziv;
+                brod.MaxWarpBrzina = br.maxWarpBrzina;
+                brod.BrojLaserskihTopova = br.brojLaserskihTopova;
+                brod.Tip = br.tip;
+                brod.FotonskoTorpedo = br.fotonskoTorpedo;
+                brod.PosadaKojaPoseduje = posada;
+                brod.PlanetaKonstrukcije = planeta;
+
+                s.SaveOrUpdate(brod);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+            return true;
+        }
+        public static bool dodajBrod(TransportniBrodBasic br, int idPosade, int idPlanete)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                TransportniBrod brod = new TransportniBrod();
+                Posada posada = s.Load<Posada>(idPosade);
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                brod.Naziv = br.naziv;
+                brod.MaxWarpBrzina = br.maxWarpBrzina;
+                brod.Nosivost = br.nosivost;
+                brod.PosadaKojaPoseduje = posada;
+                brod.PlanetaKonstrukcije = planeta;
+
+                s.SaveOrUpdate(brod);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+            return true;
+
+        }
         #endregion
         #region Igrac
         public static List<IgracPregled> vratiSveIgrace()
@@ -159,11 +406,11 @@ namespace DeathStar_new
                 ISession s = DataLayer.GetSession();
 
                 IEnumerable<Igrac> sviIgraci = from o in s.Query<Igrac>()
-                                       select o;
+                                               select o;
 
                 foreach (Igrac i in sviIgraci)
                 {
-                    igraci.Add(new IgracPregled(i.Username, i.Ime, i.Prezime, i.Pol, i.Drzava,i.DatumOtvaranjaNaloga,i.DatumRodjenja,i.Email,i.URLAvatara,i.Opis));
+                    igraci.Add(new IgracPregled(i.Username, i.Ime, i.Prezime, i.Pol, i.Drzava, i.DatumOtvaranjaNaloga, i.DatumRodjenja, i.Email, i.URLAvatara, i.Opis));
                 }
 
                 s.Close();
@@ -176,14 +423,15 @@ namespace DeathStar_new
             return igraci;
         }
 
-        public static void dodajIgraca(IgracBasic i, int id)
+        public static void dodajIgraca(IgracBasic i)
         {
             try
             {
                 ISession s = DataLayer.GetSession();
 
                 Igrac o = new Igrac();
-                Planeta p = s.Load<Planeta>(id);
+                Planeta planeta = s.Query<Planeta>()
+                    .FirstOrDefault(p => !s.Query<Igrac>().Any(ig => ig.MaticnaPlaneta == p));
 
                 o.Ime = i.ime;
                 o.Prezime = i.prezime;
@@ -194,7 +442,7 @@ namespace DeathStar_new
                 o.DatumRodjenja = i.datumRodjenja;
                 o.DatumOtvaranjaNaloga = i.datumOtvaranjaNaloga;
                 o.Drzava = i.drzava;
-                o.MaticnaPlaneta = p;
+                o.MaticnaPlaneta = planeta;
                 o.Username = i.username;
                 s.SaveOrUpdate(o);
 
@@ -268,7 +516,7 @@ namespace DeathStar_new
 
                 un.Naziv = u.naziv;
                 un.DatumFormiranja = u.datumFormiranja;
-
+                s.SaveOrUpdate(un);
                 s.Flush();
                 s.Close();
             }
@@ -285,7 +533,7 @@ namespace DeathStar_new
                 ISession s = DataLayer.GetSession();
 
                 IEnumerable<Savez> sviSavezi = from o in s.Query<Savez>()
-                                          select o;
+                                               select o;
 
                 foreach (Savez u in sviSavezi)
                 {
@@ -302,6 +550,7 @@ namespace DeathStar_new
             return savezi;
         }
         #endregion
+
         public static DialogResult confirmMessage(string izabranoTelo)
         {
             string poruka = "Da li zelite da obrisete " + izabranoTelo;

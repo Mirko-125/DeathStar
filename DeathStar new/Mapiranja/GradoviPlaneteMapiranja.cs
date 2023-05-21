@@ -12,9 +12,10 @@ namespace DeathStar_new.Mapiranja
     {
         public GradoviPlaneteMapiranja()
         {
+            Table("GRADOVI_PLANETE");
             CompositeId()
                 .KeyReference(x => x.GradPlaneta, "IDP")
-                .KeyProperty(x => x.Grad, "GRAD");
+                .KeyProperty(x => x.Grad, "GRAD");          
         }
     }
 }

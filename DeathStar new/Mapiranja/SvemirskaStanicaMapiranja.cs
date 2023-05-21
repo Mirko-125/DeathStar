@@ -13,8 +13,7 @@ namespace DeathStar_new.Mapiranja
         public SvemirskaStanicaMapiranja()
         {
             UseUnionSubclassForInheritanceMapping();
-
-            Id(x => x.Id).GeneratedBy.Identity();
+            Id(x => x.Id).GeneratedBy.SequenceIdentity("S19040.SHARED_STANICA_ID_SEQ");
             Map(x => x.Naziv, "NAZIV");
             Map(x => x.Udaljenost).Column("UDALJENOST");          
             Map(x => x.BrojLjudi).Column("BROJ_LJUDI");

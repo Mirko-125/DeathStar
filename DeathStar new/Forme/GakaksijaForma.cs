@@ -88,8 +88,12 @@ namespace DeathStar_new.Forme
             }
 
             string nazivGalaksije = listaGalaksija.SelectedItems[0].SubItems[0].Text;
-         
-            if (DTOManager.confirmMessage("izabranu galaksiju") == DialogResult.OK)
+            string poruka = "Da li zelite da obrisete izabranu galaksiju?";
+            string title = "Pitanje";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result = MessageBox.Show(poruka, title, buttons);
+
+            if (result == DialogResult.OK)
             {
                 DTOManager.obrisiGalaksiju(nazivGalaksije);
                 MessageBox.Show("Brisanje galaksije je uspesno obavljeno!");
@@ -101,9 +105,31 @@ namespace DeathStar_new.Forme
             }
         }
 
-        private void listaGalaksija_SelectedIndexChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            if (listaGalaksija.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite galaksiju cije kvadrante zelite da vidite.");
+                return;
+            }
 
+            string nazivGalaksije = listaGalaksija.SelectedItems[0].SubItems[0].Text;
+            GalaksijaBasic g = DTOManager.vratiGalaksiju(nazivGalaksije);
+            KvadrantiForma kvadrantiForma = new KvadrantiForma(g);
+            kvadrantiForma.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listaGalaksija.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite galaksiju koju zelite da izmenite.");
+                return;
+            }
+
+            GalaksijaIzmeniForma formaIzmeni = new GalaksijaIzmeniForma(listaGalaksija.SelectedItems[0].SubItems[0].Text);
+            formaIzmeni.ShowDialog();
+            this.popuniTabeluGalaksijama();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace DeathStar_new.Entiteti
         public virtual int Id { get; protected set; }
         public virtual string Naziv { get; set;}
         public virtual string GlavniGrad { get; set; }
-        public virtual int BrojStanovnika { get; set; }
+        public virtual Int64 BrojStanovnika { get; set; }
         public virtual string DominantnaRasa { get; set; }
         public virtual string DrustvenoUredjenje { get; set; }
         public virtual string ImeZvezdanogSistema { get; set; }
