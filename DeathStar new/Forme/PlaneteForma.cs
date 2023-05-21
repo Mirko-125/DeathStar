@@ -72,23 +72,54 @@ namespace DeathStar_new.Forme
             brodoviForma.ShowDialog();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void OsvojiPlanetu_Click(object sender, EventArgs e)
         {
-
             if (listaPlaneta.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Izaberite planetu čije prirodne satelite želite da vidite.");
+                MessageBox.Show("Izaberite planetu cije brodove zelite da vidite!");
                 return;
             }
             int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
-            PrirodniSatelitiIPojaveForma psipForma = new PrirodniSatelitiIPojaveForma(id);
-            psipForma.ShowDialog();
+            OsvajanjeForma osvajanjeForma = new OsvajanjeForma(id);
+            osvajanjeForma.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Gradovi_Click(object sender, EventArgs e)
         {
-            PlanetaDodajForma planetaForma = new PlanetaDodajForma(galaksija);
-            planetaForma.ShowDialog();
+            if (listaPlaneta.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite planetu cije brodove zelite da vidite!");
+                return;
+            }
+            int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
+            GradoviForma gradoviForma = new GradoviForma(id);
+            gradoviForma.ShowDialog();
+        }
+
+        private void SvemirskeStaniceButton_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
+            SvemirskeStaniceForma forma = new SvemirskeStaniceForma(id);
+            forma.ShowDialog();
+        }
+
+        private void dodajPlanetuButton_Click(object sender, EventArgs e)
+        {
+            PlanetaDodajForma forma = new PlanetaDodajForma(galaksija);
+            forma.ShowDialog();
+            this.popuniPodacima();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (listaPlaneta.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite sa prirodnim satelitima etc");
+                return;
+            }
+            int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
+            PrirodniSatelitiIPojaveForma forma = new PrirodniSatelitiIPojaveForma(id);
+            forma.ShowDialog();
         }
     }
 }

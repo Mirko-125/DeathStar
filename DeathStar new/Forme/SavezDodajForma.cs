@@ -27,5 +27,10 @@ namespace DeathStar_new.Forme
             MessageBox.Show("Nov savez je u galaksiji"); 
             this.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

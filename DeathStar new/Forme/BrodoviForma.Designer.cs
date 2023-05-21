@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrodoviForma));
             this.listaBorbenihBrodova = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -163,6 +162,7 @@
             // 
             this.konstruisiBrod.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.konstruisiBrod.Font = new System.Drawing.Font("Consolas", 14F);
+            this.konstruisiBrod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.konstruisiBrod.Location = new System.Drawing.Point(440, 397);
             this.konstruisiBrod.Name = "konstruisiBrod";
             this.konstruisiBrod.Size = new System.Drawing.Size(231, 68);
@@ -180,7 +180,6 @@
             this.Controls.Add(this.konstruisiBrod);
             this.Controls.Add(this.groupbox16);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BrodoviForma";
             this.Text = "BrodoviForma";
             this.Load += new System.EventHandler(this.BrodoviForma_Load);

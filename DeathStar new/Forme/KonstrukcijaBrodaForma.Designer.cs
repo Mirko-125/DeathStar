@@ -59,7 +59,7 @@
             // 
             // Konstruisi
             // 
-            this.Konstruisi.BackColor = System.Drawing.Color.SkyBlue;
+            this.Konstruisi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Konstruisi.Font = new System.Drawing.Font("Consolas", 14F);
             this.Konstruisi.Location = new System.Drawing.Point(731, 196);
             this.Konstruisi.Name = "Konstruisi";
@@ -125,6 +125,7 @@
             this.TipComboBox.Name = "TipComboBox";
             this.TipComboBox.Size = new System.Drawing.Size(113, 21);
             this.TipComboBox.TabIndex = 3;
+            this.TipComboBox.SelectedIndexChanged += new System.EventHandler(this.TipComboBox_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -159,7 +160,6 @@
             this.TransportniBrodGroup.TabIndex = 14;
             this.TransportniBrodGroup.TabStop = false;
             this.TransportniBrodGroup.Text = "Transportni brod";
-            this.TransportniBrodGroup.Enter += new System.EventHandler(this.TransportniBrodGroup_Enter);
             // 
             // NosivostText
             // 
@@ -202,6 +202,7 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Osnove broda";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // PosadaIdText
             // 
@@ -265,6 +266,7 @@
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Specijalizacija";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label6
             // 

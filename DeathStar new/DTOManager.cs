@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,130 +15,8 @@ namespace DeathStar_new
 {
     internal class DTOManager
     {
-        #region Pojava
-        public static bool dodajPojavu(string naziv, string tip, bool opasnost, int idP)
-        {
-            try
-            {
-                ISession s = DataLayer.GetSession();
-                Planeta planeta = s.Load<Planeta>(idP);
-                Pojava pojava = new Pojava();
-                pojava.Naziv = naziv;
-                pojava.TipPojave = tip;
-                pojava.IzazivaLiOpasnost = opasnost;
-                pojava.PlanetaDeo = planeta;
 
-                s.Save(pojava);
-
-                s.Flush();
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-                return false;
-            }
-
-            return true;
-
-        }
-        public static List<PojavaPregled> vratiSvePojavePlanete(int idP)   
-        {
-            List<PojavaPregled> pojave = new List<PojavaPregled>();
-            try
-            {
-                ISession s = DataLayer.GetSession();
-
-                Planeta planeta = s.Load<Planeta>(idP);
-
-                IEnumerable<Pojava> svePojave = from p in s.Query<Pojava>()
-                                                     where p.PlanetaDeo == planeta
-                                                     select p;
-
-                foreach (Pojava pojava in svePojave)
-                {
-                    pojave.Add(new PojavaPregled
-                    {
-                        naziv = pojava.Naziv,
-                        tipPojave = pojava.TipPojave,
-                        izazivaLiOpasnost = pojava.IzazivaLiOpasnost
-                    });
-                }
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-            }
-
-            return pojave;
-        }
-        #endregion
-        #region PrirodniSatelit
-        public static bool dodajPrirodniSatelit(string naziv, int udaljenost, int precnik, bool naseobine,int idP)
-        {
-            try
-            {
-                ISession s = DataLayer.GetSession();
-
-                Planeta planeta = s.Load<Planeta>(idP);
-                PrirodniSatelit prirodniSatelit = new PrirodniSatelit();
-                prirodniSatelit.Naziv = naziv;
-                prirodniSatelit.Udaljenost = udaljenost;
-                prirodniSatelit.Precnik = precnik;
-                prirodniSatelit.Naseobine = naseobine;
-                prirodniSatelit.KruziOkoPlanete = planeta;
-
-                s.Save(prirodniSatelit);
-
-                s.Flush();
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-                return false;
-            }
-
-            return true;
-        }
-        public static List<PrirodniSatelitPregled> vratiSvePrirodneSatelite(int idP)
-        {
-            List<PrirodniSatelitPregled> prirodniSateliti = new List<PrirodniSatelitPregled>();
-            try
-            {
-                ISession s = DataLayer.GetSession();
-
-                Planeta planeta = s.Load<Planeta>(idP);
-
-                IEnumerable<PrirodniSatelit> sviPS = from ps in s.Query<PrirodniSatelit>()
-                                                     where ps.KruziOkoPlanete == planeta
-                                                     select ps;
-
-                foreach (PrirodniSatelit prirodniSatelit in sviPS)
-                {
-                    prirodniSateliti.Add(new PrirodniSatelitPregled
-                    {
-                        naziv = prirodniSatelit.Naziv,
-                        udaljenost = prirodniSatelit.Udaljenost,
-                        precnik = prirodniSatelit.Precnik,
-                        naseobine = prirodniSatelit.Naseobine
-                    }) ;
-                }
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-            }
-
-            return prirodniSateliti;
-        }
-        #endregion
+        
         #region Galaksija
         public static List<GalaksijaPregled> vratiSveGalaksije()
         {
@@ -231,6 +110,131 @@ namespace DeathStar_new
         #endregion
 
         #region Planete
+        public static void dodajPlanetu(PlanetaBasic p, string nazivGalaksije)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Galaksija gal = s.Load<Galaksija>(nazivGalaksije);
+                Planeta o = new Planeta();
+
+                o.Naziv = p.naziv;
+                o.GlavniGrad = p.glavniGrad;
+                o.DominantnaRasa = p.dominantnaRasa;
+                o.DrustvenoUredjenje = p.drustvenoUredjenje;
+                o.ImeZvezdanogSistema = p.imeZvezdanogSistema;
+                o.TipZvezdanogSistema = p.tipZvezdanogSistema;
+                o.X = p.x;
+                o.Y = p.y;
+                o.Z = p.z;
+                o.Berilijum = p.berilijum;
+                o.Trilijum = p.trilijum;
+                o.Plutonijum = p.plutonijum;
+                o.UGalaksiji = gal;
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+        }
+
+        public static List<SpisakOruzjaPregled> vratiSvaOruzjaStanice(int idS)
+        {
+            List<SpisakOruzjaPregled> spisakOruzja= new List<SpisakOruzjaPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                VojnaStanica stanica = s.Load<VojnaStanica>(idS);
+
+                IEnumerable<SpisakOruzja> spisakOruzjaSve = from p in s.Query<SpisakOruzja>()
+                                                             where p.Stanica == stanica
+                                                             select p;
+                foreach (SpisakOruzja g in spisakOruzjaSve)
+                {
+                    spisakOruzja.Add(new SpisakOruzjaPregled { oruzje = g.Oruzje});
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+            return spisakOruzja;
+        }
+
+        public static void dodajOruzjeStanici(string naziv, int idStanice)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                VojnaStanica stanica = s.Load<VojnaStanica>(idStanice);
+                SpisakOruzja oruzje = new SpisakOruzja();
+                oruzje.Stanica = stanica;
+                oruzje.Oruzje = naziv;
+
+                s.Save(oruzje);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+        }
+        public static void dodajGradPlaneti(string naziv, int idPlanete)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                GradoviPlanete grad = new GradoviPlanete();
+                grad.GradPlaneta = planeta;
+                grad.Grad = naziv;
+
+                s.Save(grad);
+                s.Flush();
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+
+        }
+        public static List<GradoviPlanetePregled> vratiSveGradovePlanete(int idPlanete)
+        {
+            List<GradoviPlanetePregled> gradovi = new List<GradoviPlanetePregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+
+                IEnumerable<GradoviPlanete> gradoviPlanete = from p in s.Query<GradoviPlanete>()
+                                                  where p.GradPlaneta == planeta
+                                                  select p;
+                foreach (GradoviPlanete g in gradoviPlanete)
+                {
+                    gradovi.Add(new GradoviPlanetePregled { grad = g.Grad });
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+            return gradovi;
+        }
         public static List<PlanetaPregled> vratiSvePlaneteGalaksije(string galaksijaNaziv)
         {
             List<PlanetaPregled> planete = new List<PlanetaPregled>();
@@ -275,39 +279,6 @@ namespace DeathStar_new
 
             return planete;
         }
-        public static void dodajPlanetu(PlanetaBasic p, string nazivGalaksije)
-        {
-            try
-            {
-                ISession s = DataLayer.GetSession();
-                Galaksija gal = s.Load<Galaksija>(nazivGalaksije);
-                Planeta o = new Planeta();
-
-                o.Naziv = p.naziv;
-                o.GlavniGrad = p.glavniGrad;
-                o.DominantnaRasa = p.dominantnaRasa;
-                o.DrustvenoUredjenje = p.drustvenoUredjenje;
-                o.ImeZvezdanogSistema = p.imeZvezdanogSistema;
-                o.TipZvezdanogSistema = p.tipZvezdanogSistema;
-                o.X=p.x;
-                o.Y=p.y;
-                o.Z=p.z;
-                o.Berilijum = p.berilijum;
-                o.Trilijum = p.trilijum;
-                o.Plutonijum = p.plutonijum;
-                o.UGalaksiji = gal;
-
-                s.SaveOrUpdate(o);
-
-                s.Flush();
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-            }
-        }
 
         /*public static PlanetaBasic vratiPlanetu(int id)
         {
@@ -338,8 +309,99 @@ namespace DeathStar_new
             }
             return planeta;
         }*/
-        #endregion
 
+        public static string osvojiPlanetu(int idPlanete, int PosadaId)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                Posada posada = s.Load<Posada>(PosadaId);
+                Igrac prosliIgrac = planeta.IgracKojiJePoseduje;
+                if (prosliIgrac == null)
+                {
+                    return "Izaberite planetu sa nekim igracem (U TRENUTKU INSERTOVANJA, TO SU PLANETA SA ID (NAZIVG = ANDROMEDAS)9, 10, 11";
+                }
+
+                Osvajanje osvajanje = new Osvajanje();
+                osvajanje.PosadaOsvaja = posada;
+                osvajanje.PlanetaOsvojena= planeta;
+                osvajanje.PrethodniVlasnik = prosliIgrac;
+
+                s.Save(osvajanje);
+                s.Flush();
+                s.Close();
+
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return "Neuspesno";
+            }
+            return "Uspesno";
+        }
+        #endregion
+        #region Pojava
+        public static bool dodajPojavu(string naziv, string tip, bool opasnost, int idP)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Planeta planeta = s.Load<Planeta>(idP);
+                Pojava pojava = new Pojava();
+                pojava.Naziv = naziv;
+                pojava.TipPojave = tip;
+                pojava.IzazivaLiOpasnost = opasnost;
+                pojava.PlanetaDeo = planeta;
+
+                s.Save(pojava);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+
+        }
+        public static List<PojavaPregled> vratiSvePojavePlanete(int idP)
+        {
+            List<PojavaPregled> pojave = new List<PojavaPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+
+                IEnumerable<Pojava> svePojave = from p in s.Query<Pojava>()
+                                                where p.PlanetaDeo == planeta
+                                                select p;
+
+                foreach (Pojava pojava in svePojave)
+                {
+                    pojave.Add(new PojavaPregled
+                    {
+                        naziv = pojava.Naziv,
+                        tipPojave = pojava.TipPojave,                   
+                        izazivaLiOpasnost = pojava.IzazivaLiOpasnost
+                    });
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return pojave;
+        }
+        #endregion
         #region Kvadranti
         public static List<KvadrantPregled>vratiSveKvadranteGalaksije(string nazivG)
         {
@@ -439,7 +501,176 @@ namespace DeathStar_new
             return true;
         }
         #endregion
+        #region Stanice
+        public static bool dodajStanicu(VojnaStanicaBasic br, int idPlanete)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                VojnaStanica stanica = new VojnaStanica();               
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                stanica.Naziv = br.naziv;
+                stanica.Udaljenost = br.udaljenost;
+                stanica.BrojLjudi= br.brojLjudi;
+                stanica.Velicina = br.velicina;
+                stanica.DeoPlanete = planeta;
+                s.SaveOrUpdate(stanica);
 
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+            return true;
+        }
+        public static bool dodajStanicu(CivilnaStanicaBasic br, int idPlanete)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                CivilnaStanica stanica = new CivilnaStanica();
+                Planeta planeta = s.Load<Planeta>(idPlanete);
+                stanica.Naziv = br.naziv;
+                stanica.Udaljenost = br.udaljenost;
+                stanica.BrojLjudi = br.brojLjudi;
+                stanica.Velicina = br.velicina;
+                stanica.DeoPlanete = planeta;
+                stanica.Svrha = br.svrha;
+
+                s.SaveOrUpdate(stanica);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+            return true;
+
+        }
+        public static List<SvemirskaStanicaPregled> vratiSveStanicePlanete(int idPlanete, string tip)
+        {
+            List<SvemirskaStanicaPregled> stanice = new List<SvemirskaStanicaPregled>();
+            try
+            {
+                ISession session = DataLayer.GetSession();
+                Planeta planeta = session.Load<Planeta>(idPlanete);
+                IEnumerable<SvemirskaStanica> sveStanice;
+                if (tip == "vojna")
+                {
+                    sveStanice = from b in session.Query<VojnaStanica>()
+                                 where b.DeoPlanete == planeta
+                                 select b;
+                    foreach (VojnaStanica s in sveStanice)
+                    {
+                        stanice.Add(new VojnaStanicaPregled(
+                            s.Id,
+                            s.Naziv,
+                            s.Udaljenost,
+                            s.BrojLjudi,
+                            s.Velicina
+                        ));
+                    }
+                }
+                else
+                {
+                    sveStanice = from b in session.Query<CivilnaStanica>()
+                                 where b.DeoPlanete == planeta
+                                 select b;
+                    foreach (CivilnaStanica s in sveStanice)
+                    {
+                        stanice.Add(new CivilnaSvemirskaStanicaPregled(
+                            s.Id,
+                            s.Naziv,
+                            s.Udaljenost,
+                            s.Svrha,
+                            s.BrojLjudi,
+                            s.Velicina
+                            ));
+                    }
+                }
+                session.Close();
+
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return stanice;
+
+        }
+        #endregion
+        #region PrirodniSatelit
+        public static bool dodajPrirodniSatelit(string naziv, int udaljenost, int precnik, bool naseobine, int idP)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+                PrirodniSatelit prirodniSatelit = new PrirodniSatelit();
+                prirodniSatelit.Naziv = naziv;
+                prirodniSatelit.Udaljenost = udaljenost;
+                prirodniSatelit.Precnik = precnik;
+                prirodniSatelit.Naseobine = naseobine;
+                prirodniSatelit.KruziOkoPlanete = planeta;
+
+                s.Save(prirodniSatelit);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+        }
+        public static List<PrirodniSatelitPregled> vratiSvePrirodneSatelite(int idP)
+        {
+            List<PrirodniSatelitPregled> prirodniSateliti = new List<PrirodniSatelitPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+
+                IEnumerable<PrirodniSatelit> sviPS = from ps in s.Query<PrirodniSatelit>()
+                                                     where ps.KruziOkoPlanete == planeta
+                                                     select ps;
+
+                foreach (PrirodniSatelit prirodniSatelit in sviPS)
+                {
+                    prirodniSateliti.Add(new PrirodniSatelitPregled
+                    {
+                        naziv = prirodniSatelit.Naziv,
+                        udaljenost = prirodniSatelit.Udaljenost,
+                        precnik = prirodniSatelit.Precnik,
+                        naseobine = prirodniSatelit.Naseobine
+                    });
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return prirodniSateliti;
+        }
+        #endregion
         #region Brodovi
         public static List<BrodPregled> vratiSveBrodovePlanete(int idPlanete, string tip)
         {
@@ -535,6 +766,7 @@ namespace DeathStar_new
                 brod.MaxWarpBrzina = br.maxWarpBrzina;
                 brod.Nosivost = br.nosivost;
                 brod.PosadaKojaPoseduje = posada;
+                brod.ZastitnaOtplata = br.zastitnaOtplata;
                 brod.PlanetaKonstrukcije = planeta;
 
                 s.SaveOrUpdate(brod);
@@ -610,30 +842,7 @@ namespace DeathStar_new
                 new InnerExceptionHandler().handle(ec);
             }
         }
-        public static bool izmeniIgraca(IgracBasic i, string usernameI)
-        {
-            try
-            {
-                ISession s = DataLayer.GetSession();
-                Igrac igrac = new Igrac();
-                igrac.Username = usernameI;
-                igrac.Ime= i.ime;
-                igrac.Prezime = i.prezime;
-                igrac.Drzava = i.drzava;
-                igrac.Email = i.email;
-                igrac.URLAvatara = i.urlAvatara;
-                igrac.Opis = i.opis;
-                s.SaveOrUpdate(igrac);
-                s.Flush();
-                s.Close();
-            }
-            catch(Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-                return false;
-            }
-            return true;
-        }
+
         public static void obrisiIgraca(string naziv)
         {
             try
@@ -651,7 +860,37 @@ namespace DeathStar_new
                 new InnerExceptionHandler().handle(ec);
             }
         }
-        
+        /*public static IgracBasic vratiIgraca(string naziv)
+        {
+            IgracBasic igracBasic = new IgracBasic();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                
+                o.Ime = i.ime;
+                o.Prezime = i.prezime;
+                o.Pol = i.pol;
+                o.Email = i.email;
+                o.Opis = i.opis;
+                o.URLAvatara = i.urlAvatara;
+                o.DatumRodjenja = i.datumRodjenja;
+                o.DatumOtvaranjaNaloga = i.datumOtvaranjaNaloga;
+                o.Drzava = i.drzava;
+                o.MaticnaPlaneta = p;
+                o.Username = i.username;
+                s.SaveOrUpdate(o);   
+                
+                Igrac igrac = s.Load<Igrac>(naziv);
+                igracBasic = new IgracBasic(igrac.Username, igrac.Ime, igrac.Prezime, igrac.Pol, igrac.Drzava, igrac.DatumOtvaranjaNaloga, igrac.DatumRodjenja, igrac.Email, igrac.URLAvatara, igrac.Opis, igrac.DeoPosade, igrac.MaticnaPlaneta, igrac.DeoSaveza);
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return igracBasic;
+        }
+        */
         #endregion
         #region Savez
         public static void dodajSavez(SavezBasic u)

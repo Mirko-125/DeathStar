@@ -34,7 +34,6 @@
             this.Galaksije = new System.Windows.Forms.Button();
             this.Savezi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -55,35 +54,41 @@
             // 
             // Igraci
             // 
-            this.Igraci.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Igraci.Location = new System.Drawing.Point(102, 19);
+            this.Igraci.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Igraci.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Igraci.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Igraci.Location = new System.Drawing.Point(99, 19);
             this.Igraci.Name = "Igraci";
-            this.Igraci.Size = new System.Drawing.Size(103, 23);
+            this.Igraci.Size = new System.Drawing.Size(154, 49);
             this.Igraci.TabIndex = 1;
             this.Igraci.Text = "Igrači";
-            this.Igraci.UseVisualStyleBackColor = true;
+            this.Igraci.UseVisualStyleBackColor = false;
             this.Igraci.Click += new System.EventHandler(this.Igraci_Click);
             // 
             // Galaksije
             // 
-            this.Galaksije.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Galaksije.Location = new System.Drawing.Point(102, 63);
+            this.Galaksije.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Galaksije.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Galaksije.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Galaksije.Location = new System.Drawing.Point(99, 83);
             this.Galaksije.Name = "Galaksije";
-            this.Galaksije.Size = new System.Drawing.Size(103, 23);
+            this.Galaksije.Size = new System.Drawing.Size(154, 51);
             this.Galaksije.TabIndex = 2;
             this.Galaksije.Text = "Galaksije";
-            this.Galaksije.UseVisualStyleBackColor = true;
+            this.Galaksije.UseVisualStyleBackColor = false;
             this.Galaksije.Click += new System.EventHandler(this.Galaksije_Click);
             // 
             // Savezi
             // 
-            this.Savezi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Savezi.Location = new System.Drawing.Point(102, 107);
+            this.Savezi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Savezi.Font = new System.Drawing.Font("Consolas", 14F);
+            this.Savezi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Savezi.Location = new System.Drawing.Point(99, 149);
             this.Savezi.Name = "Savezi";
-            this.Savezi.Size = new System.Drawing.Size(103, 23);
+            this.Savezi.Size = new System.Drawing.Size(154, 53);
             this.Savezi.TabIndex = 3;
             this.Savezi.Text = "Savezi";
-            this.Savezi.UseVisualStyleBackColor = true;
+            this.Savezi.UseVisualStyleBackColor = false;
             this.Savezi.Click += new System.EventHandler(this.Savezi_Click);
             // 
             // groupBox1
@@ -92,23 +97,12 @@
             this.groupBox1.Controls.Add(this.Savezi);
             this.groupBox1.Controls.Add(this.Galaksije);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(84, 230);
+            this.groupBox1.Location = new System.Drawing.Point(64, 230);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(311, 208);
+            this.groupBox1.Size = new System.Drawing.Size(350, 208);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Glavni meni";
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(12, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "testing";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -127,9 +121,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(491, 450);
+            this.ClientSize = new System.Drawing.Size(471, 461);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,7 +142,6 @@
         private System.Windows.Forms.Button Galaksije;
         private System.Windows.Forms.Button Savezi;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
     }
 }

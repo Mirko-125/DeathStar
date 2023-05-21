@@ -54,6 +54,7 @@
             this.listaKvadranta.TabIndex = 1;
             this.listaKvadranta.UseCompatibleStateImageBehavior = false;
             this.listaKvadranta.View = System.Windows.Forms.View.Details;
+            this.listaKvadranta.SelectedIndexChanged += new System.EventHandler(this.listaKvadranta_SelectedIndexChanged);
             // 
             // columnHeader10
             // 

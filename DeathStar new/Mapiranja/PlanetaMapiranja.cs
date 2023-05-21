@@ -14,7 +14,7 @@ namespace DeathStar_new.Entiteti
         {
             Table("PLANETA");
 
-            Id(x => x.Id, "ID").GeneratedBy.Identity();
+            Id(x => x.Id, "ID").GeneratedBy.TriggerIdentity();
 
             Map(x => x.Naziv, "NAZIV");
             Map(x => x.GlavniGrad, "GLAVNI_GRAD");
@@ -68,8 +68,6 @@ namespace DeathStar_new.Entiteti
                 .LazyLoad()
                 .Cascade.All()
                 .Inverse();
-
-
         }
     }
 }

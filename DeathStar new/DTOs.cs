@@ -95,24 +95,32 @@ namespace DeathStar_new
     #region Stanice, svemirske, vojnce, sateliti... i spisak oruzja // proveri visevrednosni atribut
     public class SatelitBasic
     {
+        public int id;
         public string naziv;
         public int udaljenost;
         public PlanetaBasic kruziOkoPlanete;
         public SatelitBasic() { }
-        public SatelitBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete)
+        public SatelitBasic(int id, string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete)
         {
+            this.id = id;
             this.naziv = naziv;
             this.udaljenost = udaljenost;
             this.kruziOkoPlanete = kruziOkoPlanete;
         }
     }
-    public class PrirodniSatelitBasic : SatelitBasic
+    public class PrirodniSatelitBasic
     {
+        public string naziv;
+        public int udaljenost;
+        public PlanetaBasic kruziOkoPlanete;
         public int precnik;
         public bool naseobine;
         public PrirodniSatelitBasic() { }
-        public PrirodniSatelitBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int precnik, bool naseobine) : base(naziv, udaljenost, kruziOkoPlanete)
+        public PrirodniSatelitBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int precnik, bool naseobine)
         {
+            this.naziv = naziv;
+            this.udaljenost = udaljenost;
+            this.kruziOkoPlanete = kruziOkoPlanete;
             this.precnik = precnik;
             this.naseobine = naseobine;
         }
@@ -122,7 +130,7 @@ namespace DeathStar_new
         public int brojLjudi;
         public int velicina;
         public SvemirskaStanicaBasic() { }
-        public SvemirskaStanicaBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int brojLjudi, int velicina) : base(naziv, udaljenost, kruziOkoPlanete)
+        public SvemirskaStanicaBasic(int id, string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int brojLjudi, int velicina) : base(id, naziv, udaljenost, kruziOkoPlanete)
         {
             this.brojLjudi = brojLjudi;
             this.velicina = velicina;
@@ -132,7 +140,7 @@ namespace DeathStar_new
     {
         public string svrha;
         public CivilnaStanicaBasic() { }
-        public CivilnaStanicaBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, string svrha, int brojLjudi, int velicina) : base(naziv, udaljenost, kruziOkoPlanete, brojLjudi, velicina)
+        public CivilnaStanicaBasic(int id, string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, string svrha, int brojLjudi, int velicina) : base(id, naziv, udaljenost, kruziOkoPlanete, brojLjudi, velicina)
         {
             this.svrha = svrha;
         }
@@ -144,7 +152,7 @@ namespace DeathStar_new
         {
             oruzja = new List<SpisakOruzjaBasic>();
         }
-        public VojnaStanicaBasic(string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int brojLjudi, int velicina) : base(naziv, udaljenost, kruziOkoPlanete, brojLjudi, velicina)
+        public VojnaStanicaBasic(int id, string naziv, int udaljenost, PlanetaBasic kruziOkoPlanete, int brojLjudi, int velicina) : base(id, naziv, udaljenost, kruziOkoPlanete, brojLjudi, velicina)
         {
             // doublecheckuj ovo
         }
@@ -185,11 +193,13 @@ namespace DeathStar_new
     }
     public class SvemirskaStanicaPregled : SatelitPregled
     {
+        public int id;
         public int brojLjudi;
         public int velicina;
         public SvemirskaStanicaPregled() { }
-        public SvemirskaStanicaPregled(string naziv, int udaljenost, int brojLjudi, int velicina) :base(naziv, udaljenost)
+        public SvemirskaStanicaPregled(int id, string naziv, int udaljenost, int brojLjudi, int velicina) :base(naziv, udaljenost)
         {
+            this.id = id;
             this.brojLjudi = brojLjudi;
             this.velicina = velicina;
         }
@@ -198,7 +208,7 @@ namespace DeathStar_new
     {
         public string svrha;
         public CivilnaSvemirskaStanicaPregled() { }
-        public CivilnaSvemirskaStanicaPregled(string naziv, int udaljenost, string svrha, int brojLjudi, int velicina) : base(naziv, udaljenost, brojLjudi, velicina)
+        public CivilnaSvemirskaStanicaPregled(int id, string naziv, int udaljenost, string svrha, int brojLjudi, int velicina) : base(id, naziv, udaljenost, brojLjudi, velicina)
         {
             this.svrha = svrha;
         }
@@ -209,7 +219,7 @@ namespace DeathStar_new
         {
             // nzm sad kako da prikaze spsak oruzja
         }
-        public VojnaStanicaPregled(string naziv, int udaljenost, int brojLjudi, int velicina) : base(naziv, udaljenost, brojLjudi, velicina)
+        public VojnaStanicaPregled(int id, string naziv, int udaljenost, int brojLjudi, int velicina) : base(id, naziv, udaljenost, brojLjudi, velicina)
         {
             // doublecheckuj ovo
         }
@@ -332,7 +342,7 @@ namespace DeathStar_new
             brodovi = new List<BrodBasic>();
             pojave = new List<PojavaBasic>();
         }
-        public PlanetaBasic(int idPlanete, string naziv, string glavniGrad, Int64 brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, string berilijum, string trilijum, string plutonijum, DateTime datumKolonizacije, PosadaBasic posadaOsvajaca, PosadaBasic posadaKolonista, IgracBasic igracMaticna, IgracBasic igracKojiPoseduje, GalaksijaBasic uGalaksiji)
+        public PlanetaBasic(int idPlanete, string naziv, string glavniGrad, Int64 brojStanovnika, string dominantnaRasa, string drustvenoUredjenje, string imeZvezdanogSistema, string tipZvezdanogSistema, int x, int y, int z, int berilijum, int trilijum, int plutonijum, DateTime datumKolonizacije, PosadaBasic posadaOsvajaca, PosadaBasic posadaKolonista, IgracBasic igracMaticna, IgracBasic igracKojiPoseduje, GalaksijaBasic uGalaksiji)
         {
             this.idPlanete = idPlanete;
             this.naziv = naziv;
@@ -345,9 +355,9 @@ namespace DeathStar_new
             this.x = x;
             this.y = y;
             this.z = z;
-            this.berilijum = Int32.Parse(berilijum);
-            this.trilijum = Int32.Parse(trilijum);
-            this.plutonijum = Int32.Parse(plutonijum);
+            this.berilijum = berilijum;
+            this.trilijum = trilijum;
+            this.plutonijum = plutonijum;
             this.datumKolonizacije = datumKolonizacije;
             this.posadaOsvajaca = posadaOsvajaca;
             this.posadaKolonista = posadaKolonista;
@@ -500,11 +510,13 @@ namespace DeathStar_new
     {
         public string naziv;
         public string tipPojave;
+        public int udaljenost;
         public bool izazivaLiOpasnost;
         public PlanetaBasic planetaDeo;
         public PojavaBasic() { }
-        public PojavaBasic(string naziv, string tipPojave, bool izazivaLiOpasnost, PlanetaBasic planetaDeo)
+        public PojavaBasic(string naziv, string tipPojave, bool izazivaLiOpasnost,int udaljenost, PlanetaBasic planetaDeo)
         {
+            this.udaljenost = udaljenost;
             this.naziv = naziv;
             this.tipPojave = tipPojave;
             this.izazivaLiOpasnost = izazivaLiOpasnost;
@@ -514,11 +526,13 @@ namespace DeathStar_new
     public class PojavaPregled
     {
         public string naziv;
+        public int udaljenost;
         public string tipPojave;
         public bool izazivaLiOpasnost;
         public PojavaPregled() { }
-        public PojavaPregled(string naziv, string tipPojave, bool izazivaLiOpasnost)
+        public PojavaPregled(string naziv, string tipPojave, bool izazivaLiOpasnost, int udaljenost)
         {
+            this.udaljenost=udaljenost;
             this.naziv = naziv;
             this.tipPojave = tipPojave;
             this.izazivaLiOpasnost = izazivaLiOpasnost;

@@ -93,5 +93,9 @@ namespace DeathStar_new.Forme
             }
         }
 
+        private void listaKvadranta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

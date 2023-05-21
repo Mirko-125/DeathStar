@@ -12,6 +12,7 @@ namespace DeathStar_new.Entiteti
         public virtual string Naziv { get; set; }
         public virtual string TipPojave { get; set; }
         public virtual bool IzazivaLiOpasnost { get; set; }
+        public virtual int Udaljenost { get; set; }
         public virtual Planeta PlanetaDeo { get; set; }
     }
 }

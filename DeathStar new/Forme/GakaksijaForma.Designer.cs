@@ -81,7 +81,6 @@
             this.listaGalaksija.TabIndex = 0;
             this.listaGalaksija.UseCompatibleStateImageBehavior = false;
             this.listaGalaksija.View = System.Windows.Forms.View.Details;
-            this.listaGalaksija.SelectedIndexChanged += new System.EventHandler(this.listaGalaksija_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

@@ -14,7 +14,7 @@ namespace DeathStar_new.Mapiranja
         {
             Table("SPISAK_ORUZJA_STANICE");
             CompositeId()
-                .KeyReference(x => x.Oruzja, "IDS")
+                .KeyReference(x => x.Stanica, "IDS")
                 .KeyProperty(x => x.Oruzje, "Oruzje");
         }
     }

@@ -36,7 +36,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listaPojava = new System.Windows.Forms.ListView();
             this.Naziv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tip = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Opasnost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,7 +98,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.listaPojava);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
@@ -106,23 +106,25 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pojave u okolini";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // listView1
+            // listaPojava
             // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listaPojava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listaPojava.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Naziv,
             this.Tip,
             this.Opasnost});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(262, 288);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listaPojava.FullRowSelect = true;
+            this.listaPojava.GridLines = true;
+            this.listaPojava.HideSelection = false;
+            this.listaPojava.Location = new System.Drawing.Point(6, 19);
+            this.listaPojava.Name = "listaPojava";
+            this.listaPojava.Size = new System.Drawing.Size(262, 288);
+            this.listaPojava.TabIndex = 0;
+            this.listaPojava.UseCompatibleStateImageBehavior = false;
+            this.listaPojava.View = System.Windows.Forms.View.Details;
+            this.listaPojava.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Naziv
             // 
@@ -150,24 +152,28 @@
             // 
             // button1
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(614, 218);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Consolas", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(601, 218);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
+            this.button1.Size = new System.Drawing.Size(148, 47);
             this.button1.TabIndex = 3;
             this.button1.Text = "Dodaj prirodni satelit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Location = new System.Drawing.Point(614, 247);
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Consolas", 12F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(601, 289);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
+            this.button2.Size = new System.Drawing.Size(148, 37);
             this.button2.TabIndex = 4;
             this.button2.Text = "Dodaj pojavu";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PrirodniSatelitiIPojaveForma
@@ -175,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(781, 499);
+            this.ClientSize = new System.Drawing.Size(781, 349);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -185,6 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrirodniSatelitiIPojaveForma";
             this.Text = "PrirodniSatelitiIPojaveForma";
+            this.Load += new System.EventHandler(this.PrirodniSatelitiIPojaveForma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -200,7 +207,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listaPojava;
         private System.Windows.Forms.ColumnHeader Naziv;
         private System.Windows.Forms.ColumnHeader Tip;
         private System.Windows.Forms.ColumnHeader Opasnost;

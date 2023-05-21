@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nazivSaveza = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.formiraj = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.nazivSaveza = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(263, 98);
+            this.label1.Location = new System.Drawing.Point(78, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(263, 181);
+            this.label2.Location = new System.Drawing.Point(78, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 1;
@@ -66,44 +66,47 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(87, 27);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(614, 350);
+            this.groupBox1.Size = new System.Drawing.Size(263, 314);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nov savez";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // nazivSaveza
+            // formiraj
             // 
-            this.nazivSaveza.Location = new System.Drawing.Point(230, 129);
-            this.nazivSaveza.Name = "nazivSaveza";
-            this.nazivSaveza.Size = new System.Drawing.Size(154, 20);
-            this.nazivSaveza.TabIndex = 2;
+            this.formiraj.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.formiraj.Font = new System.Drawing.Font("Consolas", 12F);
+            this.formiraj.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.formiraj.Location = new System.Drawing.Point(55, 205);
+            this.formiraj.Name = "formiraj";
+            this.formiraj.Size = new System.Drawing.Size(133, 46);
+            this.formiraj.TabIndex = 4;
+            this.formiraj.Text = "Formiraj";
+            this.formiraj.UseVisualStyleBackColor = false;
+            this.formiraj.Click += new System.EventHandler(this.formiraj_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(210, 208);
+            this.dateTimePicker1.Location = new System.Drawing.Point(25, 149);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // formiraj
+            // nazivSaveza
             // 
-            this.formiraj.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.formiraj.Location = new System.Drawing.Point(251, 270);
-            this.formiraj.Name = "formiraj";
-            this.formiraj.Size = new System.Drawing.Size(115, 27);
-            this.formiraj.TabIndex = 4;
-            this.formiraj.Text = "Formiraj";
-            this.formiraj.UseVisualStyleBackColor = true;
-            this.formiraj.Click += new System.EventHandler(this.formiraj_Click);
+            this.nazivSaveza.Location = new System.Drawing.Point(45, 70);
+            this.nazivSaveza.Name = "nazivSaveza";
+            this.nazivSaveza.Size = new System.Drawing.Size(154, 20);
+            this.nazivSaveza.TabIndex = 2;
             // 
             // SavezDodajForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(301, 354);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SavezDodajForma";

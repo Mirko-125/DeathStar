@@ -106,40 +106,19 @@ namespace DeathStar_new.Forme
             this.Close();
         }
 
-        private void TransportniBrodGroup_Enter(object sender, EventArgs e)
+        private void TipComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
     }
 }
-/* Trash compactor /
-  public static bool dodajBrod(BorbeniBrodBasic br, int idPosade, int idPlanete)
-        {
-            try
-            {
-                ISession s = DataLayer.GetSession();
-                BorbeniBrod brod = new BorbeniBrod();
-                Posada posada = s.Load<Posada>(idPosade);
-                Planeta planeta = s.Load<Planeta>(idPlanete);
-                brod.Naziv = br.naziv;
-                brod.MaxWarpBrzina = br.maxWarpBrzina;
-                brod.BrojLaserskihTopova = br.brojLaserskihTopova;
-                brod.Tip = br.tip;
-                brod.FotonskoTorpedo = br.fotonskoTorpedo;
-                brod.PosadaKojaPoseduje = posada;
-                brod.PlanetaKonstrukcije = planeta;
-
-                s.SaveOrUpdate(brod);
-
-                s.Flush();
-
-                s.Close();
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-                return false;
-            }
-            return true;
-        }
- */

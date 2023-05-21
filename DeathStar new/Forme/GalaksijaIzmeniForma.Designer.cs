@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GalaksijaIzmeniForma));
             this.azurirajBtn = new System.Windows.Forms.Button();
             this.Podaci = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -125,10 +124,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(288, 281);
+            this.ClientSize = new System.Drawing.Size(287, 261);
             this.Controls.Add(this.azurirajBtn);
             this.Controls.Add(this.Podaci);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GalaksijaIzmeniForma";
             this.Text = "GalaksijaIzmeniForma";
             this.Load += new System.EventHandler(this.GalaksijaIzmeniForma_Load);

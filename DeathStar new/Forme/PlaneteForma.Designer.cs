@@ -30,15 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlaneteForma));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Gradovi = new System.Windows.Forms.Button();
             this.prikaziBrodove = new System.Windows.Forms.Button();
-            this.DodajGrad = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.UnistiPlanetu = new System.Windows.Forms.Button();
-            this.DodeliIgracuPlanetu = new System.Windows.Forms.Button();
-            this.SagradiSvemirskuStanicu = new System.Windows.Forms.Button();
+            this.SvemirskeStaniceButton = new System.Windows.Forms.Button();
             this.OsvojiPlanetu = new System.Windows.Forms.Button();
-            this.PrikaziVojneStanice = new System.Windows.Forms.Button();
-            this.KonstruisiBrod = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listaPlaneta = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,122 +52,89 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.dodajPlanetuButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.Gradovi);
             this.groupBox2.Controls.Add(this.prikaziBrodove);
-            this.groupBox2.Controls.Add(this.DodajGrad);
             this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.UnistiPlanetu);
-            this.groupBox2.Controls.Add(this.DodeliIgracuPlanetu);
-            this.groupBox2.Controls.Add(this.SagradiSvemirskuStanicu);
-            this.groupBox2.Controls.Add(this.OsvojiPlanetu);
-            this.groupBox2.Controls.Add(this.PrikaziVojneStanice);
-            this.groupBox2.Controls.Add(this.KonstruisiBrod);
+            this.groupBox2.Controls.Add(this.SvemirskeStaniceButton);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(1133, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(203, 337);
+            this.groupBox2.Size = new System.Drawing.Size(203, 339);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcije";
             // 
+            // Gradovi
+            // 
+            this.Gradovi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Gradovi.Font = new System.Drawing.Font("Consolas", 12F);
+            this.Gradovi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Gradovi.Location = new System.Drawing.Point(19, 44);
+            this.Gradovi.Name = "Gradovi";
+            this.Gradovi.Size = new System.Drawing.Size(165, 44);
+            this.Gradovi.TabIndex = 9;
+            this.Gradovi.Text = "Gradovi";
+            this.Gradovi.UseVisualStyleBackColor = false;
+            this.Gradovi.Click += new System.EventHandler(this.Gradovi_Click);
+            // 
             // prikaziBrodove
             // 
-            this.prikaziBrodove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prikaziBrodove.Location = new System.Drawing.Point(7, 255);
+            this.prikaziBrodove.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.prikaziBrodove.Font = new System.Drawing.Font("Consolas", 12F);
+            this.prikaziBrodove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.prikaziBrodove.Location = new System.Drawing.Point(19, 108);
             this.prikaziBrodove.Name = "prikaziBrodove";
-            this.prikaziBrodove.Size = new System.Drawing.Size(190, 23);
+            this.prikaziBrodove.Size = new System.Drawing.Size(165, 44);
             this.prikaziBrodove.TabIndex = 8;
             this.prikaziBrodove.Text = "Brodovi";
-            this.prikaziBrodove.UseVisualStyleBackColor = true;
+            this.prikaziBrodove.UseVisualStyleBackColor = false;
             this.prikaziBrodove.Click += new System.EventHandler(this.prikaziBrodove_Click);
-            // 
-            // DodajGrad
-            // 
-            this.DodajGrad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DodajGrad.Location = new System.Drawing.Point(7, 226);
-            this.DodajGrad.Name = "DodajGrad";
-            this.DodajGrad.Size = new System.Drawing.Size(190, 23);
-            this.DodajGrad.TabIndex = 7;
-            this.DodajGrad.Text = "Dodaj grad";
-            this.DodajGrad.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Location = new System.Drawing.Point(7, 197);
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.Font = new System.Drawing.Font("Consolas", 12F);
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button7.Location = new System.Drawing.Point(19, 246);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(190, 23);
+            this.button7.Size = new System.Drawing.Size(165, 68);
             this.button7.TabIndex = 6;
             this.button7.Text = "Prikaži prirodne satelite i pojave";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // UnistiPlanetu
+            // SvemirskeStaniceButton
             // 
-            this.UnistiPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.UnistiPlanetu.Location = new System.Drawing.Point(7, 168);
-            this.UnistiPlanetu.Name = "UnistiPlanetu";
-            this.UnistiPlanetu.Size = new System.Drawing.Size(190, 23);
-            this.UnistiPlanetu.TabIndex = 5;
-            this.UnistiPlanetu.Text = "Uništi planetu";
-            this.UnistiPlanetu.UseVisualStyleBackColor = true;
-            // 
-            // DodeliIgracuPlanetu
-            // 
-            this.DodeliIgracuPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DodeliIgracuPlanetu.Location = new System.Drawing.Point(7, 139);
-            this.DodeliIgracuPlanetu.Name = "DodeliIgracuPlanetu";
-            this.DodeliIgracuPlanetu.Size = new System.Drawing.Size(190, 23);
-            this.DodeliIgracuPlanetu.TabIndex = 4;
-            this.DodeliIgracuPlanetu.Text = "Dodeli igraču planetu";
-            this.DodeliIgracuPlanetu.UseVisualStyleBackColor = true;
-            // 
-            // SagradiSvemirskuStanicu
-            // 
-            this.SagradiSvemirskuStanicu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SagradiSvemirskuStanicu.Location = new System.Drawing.Point(7, 110);
-            this.SagradiSvemirskuStanicu.Name = "SagradiSvemirskuStanicu";
-            this.SagradiSvemirskuStanicu.Size = new System.Drawing.Size(190, 23);
-            this.SagradiSvemirskuStanicu.TabIndex = 3;
-            this.SagradiSvemirskuStanicu.Text = "Sagradi svemirsku stanicu";
-            this.SagradiSvemirskuStanicu.UseVisualStyleBackColor = true;
+            this.SvemirskeStaniceButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SvemirskeStaniceButton.Font = new System.Drawing.Font("Consolas", 12F);
+            this.SvemirskeStaniceButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SvemirskeStaniceButton.Location = new System.Drawing.Point(19, 167);
+            this.SvemirskeStaniceButton.Name = "SvemirskeStaniceButton";
+            this.SvemirskeStaniceButton.Size = new System.Drawing.Size(165, 59);
+            this.SvemirskeStaniceButton.TabIndex = 3;
+            this.SvemirskeStaniceButton.Text = "Svemirske Stanice";
+            this.SvemirskeStaniceButton.UseVisualStyleBackColor = false;
+            this.SvemirskeStaniceButton.Click += new System.EventHandler(this.SvemirskeStaniceButton_Click);
             // 
             // OsvojiPlanetu
             // 
-            this.OsvojiPlanetu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.OsvojiPlanetu.Location = new System.Drawing.Point(7, 80);
+            this.OsvojiPlanetu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.OsvojiPlanetu.Font = new System.Drawing.Font("Consolas", 12F);
+            this.OsvojiPlanetu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.OsvojiPlanetu.Location = new System.Drawing.Point(1152, 383);
             this.OsvojiPlanetu.Name = "OsvojiPlanetu";
-            this.OsvojiPlanetu.Size = new System.Drawing.Size(190, 23);
+            this.OsvojiPlanetu.Size = new System.Drawing.Size(165, 44);
             this.OsvojiPlanetu.TabIndex = 2;
             this.OsvojiPlanetu.Text = "Osvoji planetu";
-            this.OsvojiPlanetu.UseVisualStyleBackColor = true;
-            // 
-            // PrikaziVojneStanice
-            // 
-            this.PrikaziVojneStanice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PrikaziVojneStanice.Location = new System.Drawing.Point(7, 50);
-            this.PrikaziVojneStanice.Name = "PrikaziVojneStanice";
-            this.PrikaziVojneStanice.Size = new System.Drawing.Size(190, 23);
-            this.PrikaziVojneStanice.TabIndex = 1;
-            this.PrikaziVojneStanice.Text = "Prikaži vojne stanice";
-            this.PrikaziVojneStanice.UseVisualStyleBackColor = true;
-            // 
-            // KonstruisiBrod
-            // 
-            this.KonstruisiBrod.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.KonstruisiBrod.Location = new System.Drawing.Point(7, 20);
-            this.KonstruisiBrod.Name = "KonstruisiBrod";
-            this.KonstruisiBrod.Size = new System.Drawing.Size(190, 23);
-            this.KonstruisiBrod.TabIndex = 0;
-            this.KonstruisiBrod.Text = "Konstruiši brod";
-            this.KonstruisiBrod.UseVisualStyleBackColor = true;
+            this.OsvojiPlanetu.UseVisualStyleBackColor = false;
+            this.OsvojiPlanetu.Click += new System.EventHandler(this.OsvojiPlanetu_Click);
             // 
             // groupBox1
             // 
@@ -284,16 +247,18 @@
             this.columnHeader10.Text = "Datum Kolonizacije";
             this.columnHeader10.Width = 109;
             // 
-            // button1
+            // dodajPlanetuButton
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(7, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Dodaj planetu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dodajPlanetuButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dodajPlanetuButton.Font = new System.Drawing.Font("Consolas", 12F);
+            this.dodajPlanetuButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dodajPlanetuButton.Location = new System.Drawing.Point(1152, 451);
+            this.dodajPlanetuButton.Name = "dodajPlanetuButton";
+            this.dodajPlanetuButton.Size = new System.Drawing.Size(165, 44);
+            this.dodajPlanetuButton.TabIndex = 2;
+            this.dodajPlanetuButton.Text = "Dodaj Planetu";
+            this.dodajPlanetuButton.UseVisualStyleBackColor = false;
+            this.dodajPlanetuButton.Click += new System.EventHandler(this.dodajPlanetuButton_Click);
             // 
             // PlaneteForma
             // 
@@ -301,8 +266,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(1342, 513);
+            this.Controls.Add(this.dodajPlanetuButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.OsvojiPlanetu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PlaneteForma";
             this.Text = "Planete";
@@ -315,14 +282,9 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button DodajGrad;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button UnistiPlanetu;
-        private System.Windows.Forms.Button DodeliIgracuPlanetu;
-        private System.Windows.Forms.Button SagradiSvemirskuStanicu;
+        private System.Windows.Forms.Button SvemirskeStaniceButton;
         private System.Windows.Forms.Button OsvojiPlanetu;
-        private System.Windows.Forms.Button PrikaziVojneStanice;
-        private System.Windows.Forms.Button KonstruisiBrod;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListView listaPlaneta;
         private System.Windows.Forms.ColumnHeader Id;
@@ -341,6 +303,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.Button prikaziBrodove;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Gradovi;
+        private System.Windows.Forms.Button dodajPlanetuButton;
     }
 }

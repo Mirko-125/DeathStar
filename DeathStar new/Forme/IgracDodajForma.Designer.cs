@@ -82,32 +82,35 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 426);
+            this.groupBox1.Size = new System.Drawing.Size(578, 279);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodaj";
             // 
             // dodaj
             // 
-            this.dodaj.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dodaj.Location = new System.Drawing.Point(683, 392);
+            this.dodaj.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dodaj.Font = new System.Drawing.Font("Consolas", 12F);
+            this.dodaj.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dodaj.Location = new System.Drawing.Point(453, 196);
             this.dodaj.Name = "dodaj";
-            this.dodaj.Size = new System.Drawing.Size(75, 23);
+            this.dodaj.Size = new System.Drawing.Size(96, 51);
             this.dodaj.TabIndex = 23;
             this.dodaj.Text = "Dodaj";
-            this.dodaj.UseVisualStyleBackColor = true;
+            this.dodaj.UseVisualStyleBackColor = false;
             this.dodaj.Click += new System.EventHandler(this.dodaj_Click);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(558, 79);
+            this.dateTimePicker2.Location = new System.Drawing.Point(349, 76);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 22;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(558, 35);
+            this.dateTimePicker1.Location = new System.Drawing.Point(349, 32);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 21;
@@ -115,7 +118,7 @@
             // 
             // drzava
             // 
-            this.drzava.Location = new System.Drawing.Point(80, 158);
+            this.drzava.Location = new System.Drawing.Point(98, 158);
             this.drzava.Name = "drzava";
             this.drzava.Size = new System.Drawing.Size(100, 20);
             this.drzava.TabIndex = 20;
@@ -166,7 +169,7 @@
             // 
             // urlavatar
             // 
-            this.urlavatar.Location = new System.Drawing.Point(97, 285);
+            this.urlavatar.Location = new System.Drawing.Point(98, 222);
             this.urlavatar.Name = "urlavatar";
             this.urlavatar.Size = new System.Drawing.Size(100, 20);
             this.urlavatar.TabIndex = 14;
@@ -174,15 +177,15 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(97, 324);
+            this.richTextBox1.Location = new System.Drawing.Point(265, 158);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(273, 89);
+            this.richTextBox1.Size = new System.Drawing.Size(158, 89);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
             // email
             // 
-            this.email.Location = new System.Drawing.Point(97, 252);
+            this.email.Location = new System.Drawing.Point(98, 189);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(100, 20);
             this.email.TabIndex = 12;
@@ -190,7 +193,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 326);
+            this.label10.Location = new System.Drawing.Point(216, 161);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(28, 13);
             this.label10.TabIndex = 9;
@@ -199,7 +202,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 288);
+            this.label9.Location = new System.Drawing.Point(18, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 13);
             this.label9.TabIndex = 8;
@@ -208,7 +211,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 255);
+            this.label8.Location = new System.Drawing.Point(18, 192);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(32, 13);
             this.label8.TabIndex = 7;
@@ -217,7 +220,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(441, 83);
+            this.label7.Location = new System.Drawing.Point(232, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 13);
             this.label7.TabIndex = 6;
@@ -226,7 +229,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(464, 39);
+            this.label6.Location = new System.Drawing.Point(255, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 5;
@@ -235,7 +238,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 161);
+            this.label5.Location = new System.Drawing.Point(18, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 4;
@@ -283,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(610, 309);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IgracDodajForma";

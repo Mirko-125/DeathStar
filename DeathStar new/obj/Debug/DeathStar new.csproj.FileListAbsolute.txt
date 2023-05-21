@@ -131,7 +131,6 @@ D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar n
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Form1.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.GakaksijaForma.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracForma.resources
-D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvojiPlanetu.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezForma.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Properties.Resources.resources
@@ -143,7 +142,6 @@ D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar n
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.GalaksijaDodajForma.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GalaksijaDodajForma.resources
-C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvojiPlanetu.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlaneteForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.VojneStanice.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.KvadrantiForma.resources
@@ -154,15 +152,29 @@ D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar n
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracIzmeniForma.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezDodajForma.resources
 D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezPridruziForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvajanjeForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.GradoviForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SpisakOruzjaForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.SvemirskeStaniceForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.KonstrukcijaStaniceForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PlanetaDodajForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PojavaDodajForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitDodajForma.resources
+D:\school\treca godina\Sistemi Baza Podataka\deathstar_new\DeathStar\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitiIPojaveForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.BrodoviForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GalaksijaIzmeniForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.GradoviForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracDodajForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.IgracIzmeniForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.KonstrukcijaBrodaForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.KonstrukcijaStaniceForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.KvadrantiForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.OsvajanjeForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlanetaDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PojavaDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitiIPojaveForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezDodajForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SavezPridruziForma.resources
-C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitiIPojaveForma.resources
-C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitDodajForma.resources
-C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PojavaDodajForma.resources
-C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlanetaDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SpisakOruzjaForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.SvemirskeStaniceForma.resources

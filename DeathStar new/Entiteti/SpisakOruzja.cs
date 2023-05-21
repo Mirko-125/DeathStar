@@ -8,7 +8,7 @@ namespace DeathStar_new.Entiteti
 {
     internal class SpisakOruzja
     {
-        public virtual VojnaStanica Oruzja { get; set; }
+        public virtual VojnaStanica Stanica { get; set; }
         public virtual string Oruzje { get; set; }
 
         public override bool Equals(object obj)
@@ -19,7 +19,7 @@ namespace DeathStar_new.Entiteti
 
             var other = (SpisakOruzja)obj;
 
-            return Oruzja == other.Oruzja && Oruzje == other.Oruzje;
+            return Stanica == other.Stanica && Oruzje == other.Oruzje;
         }
 
         public override int GetHashCode()
@@ -27,7 +27,7 @@ namespace DeathStar_new.Entiteti
             unchecked
             {
                 int hash = 17;
-                hash = hash * 23 + Oruzja.GetHashCode();
+                hash = hash * 23 + Stanica.GetHashCode();
                 hash = hash * 23 + Oruzje.GetHashCode();
                 return hash;
             }
