@@ -71,5 +71,18 @@ namespace DeathStar_new.Forme
             BrodoviForma brodoviForma = new BrodoviForma(naziv, id);
             brodoviForma.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            if (listaPlaneta.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Izaberite planetu čije prirodne satelite želite da vidite.");
+                return;
+            }
+            int id = Int32.Parse(listaPlaneta.SelectedItems[0].SubItems[0].Text);
+            PrirodniSatelitiIPojaveForma psipForma = new PrirodniSatelitiIPojaveForma(id);
+            psipForma.ShowDialog();
+        }
     }
 }

@@ -14,8 +14,130 @@ namespace DeathStar_new
 {
     internal class DTOManager
     {
+        #region Pojava
+        public static bool dodajPojavu(string naziv, string tip, bool opasnost, int idP)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Planeta planeta = s.Load<Planeta>(idP);
+                Pojava pojava = new Pojava();
+                pojava.Naziv = naziv;
+                pojava.TipPojave = tip;
+                pojava.IzazivaLiOpasnost = opasnost;
+                pojava.PlanetaDeo = planeta;
 
-        
+                s.Save(pojava);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+
+        }
+        public static List<PojavaPregled> vratiSvePojavePlanete(int idP)   
+        {
+            List<PojavaPregled> pojave = new List<PojavaPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+
+                IEnumerable<Pojava> svePojave = from p in s.Query<Pojava>()
+                                                     where p.PlanetaDeo == planeta
+                                                     select p;
+
+                foreach (Pojava pojava in svePojave)
+                {
+                    pojave.Add(new PojavaPregled
+                    {
+                        naziv = pojava.Naziv,
+                        tipPojave = pojava.TipPojave,
+                        izazivaLiOpasnost = pojava.IzazivaLiOpasnost
+                    });
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return pojave;
+        }
+        #endregion
+        #region PrirodniSatelit
+        public static bool dodajPrirodniSatelit(string naziv, int udaljenost, int precnik, bool naseobine,int idP)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+                PrirodniSatelit prirodniSatelit = new PrirodniSatelit();
+                prirodniSatelit.Naziv = naziv;
+                prirodniSatelit.Udaljenost = udaljenost;
+                prirodniSatelit.Precnik = precnik;
+                prirodniSatelit.Naseobine = naseobine;
+                prirodniSatelit.KruziOkoPlanete = planeta;
+
+                s.Save(prirodniSatelit);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+
+            return true;
+        }
+        public static List<PrirodniSatelitPregled> vratiSvePrirodneSatelite(int idP)
+        {
+            List<PrirodniSatelitPregled> prirodniSateliti = new List<PrirodniSatelitPregled>();
+            try
+            {
+                ISession s = DataLayer.GetSession();
+
+                Planeta planeta = s.Load<Planeta>(idP);
+
+                IEnumerable<PrirodniSatelit> sviPS = from ps in s.Query<PrirodniSatelit>()
+                                                     where ps.KruziOkoPlanete == planeta
+                                                     select ps;
+
+                foreach (PrirodniSatelit prirodniSatelit in sviPS)
+                {
+                    prirodniSateliti.Add(new PrirodniSatelitPregled
+                    {
+                        naziv = prirodniSatelit.Naziv,
+                        udaljenost = prirodniSatelit.Udaljenost,
+                        precnik = prirodniSatelit.Precnik,
+                        naseobine = prirodniSatelit.Naseobine
+                    }) ;
+                }
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+
+            return prirodniSateliti;
+        }
+        #endregion
         #region Galaksija
         public static List<GalaksijaPregled> vratiSveGalaksije()
         {

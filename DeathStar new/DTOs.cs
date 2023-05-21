@@ -175,9 +175,9 @@ namespace DeathStar_new
     public class PrirodniSatelitPregled : SatelitPregled
     {
         public int precnik;
-        public int naseobine;
+        public bool naseobine;
         public PrirodniSatelitPregled() { }
-        public PrirodniSatelitPregled(string naziv, int udaljenost, int precnik, int naseobine) : base(naziv, udaljenost)
+        public PrirodniSatelitPregled(string naziv, int udaljenost, int precnik, bool naseobine) : base(naziv, udaljenost)
         {
             this.precnik = precnik;
             this.naseobine = naseobine;

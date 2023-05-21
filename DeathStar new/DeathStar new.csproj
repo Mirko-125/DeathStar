@@ -196,6 +196,24 @@
     <Compile Include="Forme\PlaneteForma.Designer.cs">
       <DependentUpon>PlaneteForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\PojavaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PojavaDodajForma.Designer.cs">
+      <DependentUpon>PojavaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitDodajForma.Designer.cs">
+      <DependentUpon>PrirodniSatelitDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiIPojaveForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiIPojaveForma.Designer.cs">
+      <DependentUpon>PrirodniSatelitiIPojaveForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\SavezDodajForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +296,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\PlaneteForma.resx">
       <DependentUpon>PlaneteForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PojavaDodajForma.resx">
+      <DependentUpon>PojavaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrirodniSatelitDodajForma.resx">
+      <DependentUpon>PrirodniSatelitDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrirodniSatelitiIPojaveForma.resx">
+      <DependentUpon>PrirodniSatelitiIPojaveForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\SavezDodajForma.resx">
       <DependentUpon>SavezDodajForma.cs</DependentUpon>

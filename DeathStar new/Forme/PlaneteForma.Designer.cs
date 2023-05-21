@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlaneteForma));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.prikaziBrodove = new System.Windows.Forms.Button();
             this.DodajGrad = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.UnistiPlanetu = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.prikaziBrodove = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcije";
             // 
+            // prikaziBrodove
+            // 
+            this.prikaziBrodove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.prikaziBrodove.Location = new System.Drawing.Point(7, 255);
+            this.prikaziBrodove.Name = "prikaziBrodove";
+            this.prikaziBrodove.Size = new System.Drawing.Size(190, 23);
+            this.prikaziBrodove.TabIndex = 8;
+            this.prikaziBrodove.Text = "Brodovi";
+            this.prikaziBrodove.UseVisualStyleBackColor = true;
+            this.prikaziBrodove.Click += new System.EventHandler(this.prikaziBrodove_Click);
+            // 
             // DodajGrad
             // 
             this.DodajGrad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -98,6 +109,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Prikaži prirodne satelite i pojave";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // UnistiPlanetu
             // 
@@ -269,17 +281,6 @@
             // 
             this.columnHeader10.Text = "Datum Kolonizacije";
             this.columnHeader10.Width = 109;
-            // 
-            // prikaziBrodove
-            // 
-            this.prikaziBrodove.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prikaziBrodove.Location = new System.Drawing.Point(7, 255);
-            this.prikaziBrodove.Name = "prikaziBrodove";
-            this.prikaziBrodove.Size = new System.Drawing.Size(190, 23);
-            this.prikaziBrodove.TabIndex = 8;
-            this.prikaziBrodove.Text = "Brodovi";
-            this.prikaziBrodove.UseVisualStyleBackColor = true;
-            this.prikaziBrodove.Click += new System.EventHandler(this.prikaziBrodove_Click);
             // 
             // PlaneteForma
             // 
