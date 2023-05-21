@@ -131,5 +131,10 @@ namespace DeathStar_new.Forme
             formaIzmeni.ShowDialog();
             this.popuniTabeluGalaksijama();
         }
+
+        private void listaGalaksija_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

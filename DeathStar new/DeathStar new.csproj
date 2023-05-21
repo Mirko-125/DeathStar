@@ -300,6 +300,9 @@
     <EmbeddedResource Include="Forme\OsvojiPlanetu.resx">
       <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PlanetaDodajForma.resx">
+      <DependentUpon>PlanetaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\PlaneteForma.resx">
       <DependentUpon>PlaneteForma.cs</DependentUpon>
     </EmbeddedResource>

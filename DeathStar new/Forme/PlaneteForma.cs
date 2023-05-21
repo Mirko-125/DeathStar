@@ -84,5 +84,11 @@ namespace DeathStar_new.Forme
             PrirodniSatelitiIPojaveForma psipForma = new PrirodniSatelitiIPojaveForma(id);
             psipForma.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlanetaDodajForma planetaForma = new PlanetaDodajForma(galaksija);
+            planetaForma.ShowDialog();
+        }
     }
 }

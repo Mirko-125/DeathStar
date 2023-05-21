@@ -310,9 +310,9 @@ namespace DeathStar_new
         public int x;
         public int y;
         public int z;
-        public string berilijum;
-        public string trilijum;
-        public string plutonijum;
+        public int berilijum;
+        public int trilijum;
+        public int plutonijum;
         public DateTime datumKolonizacije;
 
         public IList<GradoviPlaneteBasic> gradovi;
@@ -345,9 +345,9 @@ namespace DeathStar_new
             this.x = x;
             this.y = y;
             this.z = z;
-            this.berilijum = berilijum;
-            this.trilijum = trilijum;
-            this.plutonijum = plutonijum;
+            this.berilijum = Int32.Parse(berilijum);
+            this.trilijum = Int32.Parse(trilijum);
+            this.plutonijum = Int32.Parse(plutonijum);
             this.datumKolonizacije = datumKolonizacije;
             this.posadaOsvajaca = posadaOsvajaca;
             this.posadaKolonista = posadaKolonista;

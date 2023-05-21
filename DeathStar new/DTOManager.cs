@@ -275,6 +275,39 @@ namespace DeathStar_new
 
             return planete;
         }
+        public static void dodajPlanetu(PlanetaBasic p, string nazivGalaksije)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Galaksija gal = s.Load<Galaksija>(nazivGalaksije);
+                Planeta o = new Planeta();
+
+                o.Naziv = p.naziv;
+                o.GlavniGrad = p.glavniGrad;
+                o.DominantnaRasa = p.dominantnaRasa;
+                o.DrustvenoUredjenje = p.drustvenoUredjenje;
+                o.ImeZvezdanogSistema = p.imeZvezdanogSistema;
+                o.TipZvezdanogSistema = p.tipZvezdanogSistema;
+                o.X=p.x;
+                o.Y=p.y;
+                o.Z=p.z;
+                o.Berilijum = p.berilijum;
+                o.Trilijum = p.trilijum;
+                o.Plutonijum = p.plutonijum;
+                o.UGalaksiji = gal;
+
+                s.SaveOrUpdate(o);
+
+                s.Flush();
+
+                s.Close();
+            }
+            catch (Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+            }
+        }
 
         /*public static PlanetaBasic vratiPlanetu(int id)
         {
@@ -618,37 +651,7 @@ namespace DeathStar_new
                 new InnerExceptionHandler().handle(ec);
             }
         }
-        /*public static IgracBasic vratiIgraca(string naziv)
-        {
-            IgracBasic igracBasic = new IgracBasic();
-            try
-            {
-                ISession s = DataLayer.GetSession();
-                
-                o.Ime = i.ime;
-                o.Prezime = i.prezime;
-                o.Pol = i.pol;
-                o.Email = i.email;
-                o.Opis = i.opis;
-                o.URLAvatara = i.urlAvatara;
-                o.DatumRodjenja = i.datumRodjenja;
-                o.DatumOtvaranjaNaloga = i.datumOtvaranjaNaloga;
-                o.Drzava = i.drzava;
-                o.MaticnaPlaneta = p;
-                o.Username = i.username;
-                s.SaveOrUpdate(o);   
-                
-                Igrac igrac = s.Load<Igrac>(naziv);
-                igracBasic = new IgracBasic(igrac.Username, igrac.Ime, igrac.Prezime, igrac.Pol, igrac.Drzava, igrac.DatumOtvaranjaNaloga, igrac.DatumRodjenja, igrac.Email, igrac.URLAvatara, igrac.Opis, igrac.DeoPosade, igrac.MaticnaPlaneta, igrac.DeoSaveza);
-            }
-            catch (Exception ec)
-            {
-                new InnerExceptionHandler().handle(ec);
-            }
-
-            return igracBasic;
-        }
-        */
+        
         #endregion
         #region Savez
         public static void dodajSavez(SavezBasic u)

@@ -165,3 +165,4 @@ C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitiIPojaveForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PrirodniSatelitDodajForma.resources
 C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PojavaDodajForma.resources
+C:\Users\Mirko\source\repos\DeathStar_new\DeathStar new\obj\Debug\DeathStar_new.Forme.PlanetaDodajForma.resources
