@@ -190,6 +190,12 @@
     <Compile Include="Forme\OsvojiPlanetu.Designer.cs">
       <DependentUpon>OsvojiPlanetu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\PlanetaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PlanetaDodajForma.Designer.cs">
+      <DependentUpon>PlanetaDodajForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\PlaneteForma.cs">
       <SubType>Form</SubType>
     </Compile>

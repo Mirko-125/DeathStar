@@ -53,14 +53,10 @@ namespace DeathStar_new.Forme
             listaMeseca.Refresh();
         }
 
-        private void IgracForma_Load(object sender, EventArgs e)
-        {
-            popuniTabeluPrirodnihSatelita();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-
+            PojavaDodajForma forma = new PojavaDodajForma(idplanete);
+            forma.ShowDialog();
         }
     }
 }
