@@ -17,9 +17,7 @@ namespace DeathStar_new.Mapiranja
 
             Map(x => x.FotonskoTorpedo).Column("FOTONSKO_TORPEDO");
             Map(x => x.BrojLaserskihTopova).Column("BROJ_LASERSKIH_TOPOVA");
-            Map(x => x.Tip).Column("TIP_BRODA"); // Ovde je tip Enum, proveri to
-             
-            //Posto je subclass ne bi trebalo da radim veze ovde?
+            Map(x => x.Tip).Column("TIP_BRODA"); 
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KonstrukcijaBrodaForma));
             this.Konstruisi = new System.Windows.Forms.Button();
             this.transportniRadio = new System.Windows.Forms.RadioButton();
             this.BorbeniBrodGroup = new System.Windows.Forms.GroupBox();
@@ -118,7 +119,7 @@
             this.TipComboBox.FormattingEnabled = true;
             this.TipComboBox.Items.AddRange(new object[] {
             "Fregata",
-            "Razarač",
+            "Razarac",
             "Krstarica"});
             this.TipComboBox.Location = new System.Drawing.Point(9, 124);
             this.TipComboBox.Name = "TipComboBox";
@@ -158,6 +159,7 @@
             this.TransportniBrodGroup.TabIndex = 14;
             this.TransportniBrodGroup.TabStop = false;
             this.TransportniBrodGroup.Text = "Transportni brod";
+            this.TransportniBrodGroup.Enter += new System.EventHandler(this.TransportniBrodGroup_Enter);
             // 
             // NosivostText
             // 
@@ -295,6 +297,7 @@
             this.Controls.Add(this.Konstruisi);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KonstrukcijaBrodaForma";
             this.Text = "KonstrukcijaBrodaForma";
             this.BorbeniBrodGroup.ResumeLayout(false);

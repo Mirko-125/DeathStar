@@ -86,7 +86,7 @@ namespace DeathStar_new.Forme
 
         private void Izmeni_Igraca_Click(object sender, EventArgs e)
         {
-            IgracIzmeniForma formaIzmeni = new IgracIzmeniForma();
+            IgracIzmeniForma formaIzmeni = new IgracIzmeniForma(listaIgraca.SelectedItems[0].SubItems[0].Text);
             formaIzmeni.ShowDialog();
             this.popuniTabeluIgraca();
         }

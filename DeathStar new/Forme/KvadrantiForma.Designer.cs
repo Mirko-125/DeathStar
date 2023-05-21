@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KvadrantiForma));
             this.listaKvadranta = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -135,6 +136,7 @@
             this.Controls.Add(this.izmeniKvadrant);
             this.Controls.Add(this.dodajKvadrant);
             this.Controls.Add(this.listaKvadranta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KvadrantiForma";
             this.Text = "KvadrantiForma";
             this.Load += new System.EventHandler(this.KvadrantiForma_Load);

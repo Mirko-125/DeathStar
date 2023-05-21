@@ -455,7 +455,30 @@ namespace DeathStar_new
                 new InnerExceptionHandler().handle(ec);
             }
         }
-
+        public static bool izmeniIgraca(IgracBasic i, string usernameI)
+        {
+            try
+            {
+                ISession s = DataLayer.GetSession();
+                Igrac igrac = new Igrac();
+                igrac.Username = usernameI;
+                igrac.Ime= i.ime;
+                igrac.Prezime = i.prezime;
+                igrac.Drzava = i.drzava;
+                igrac.Email = i.email;
+                igrac.URLAvatara = i.urlAvatara;
+                igrac.Opis = i.opis;
+                s.SaveOrUpdate(igrac);
+                s.Flush();
+                s.Close();
+            }
+            catch(Exception ec)
+            {
+                new InnerExceptionHandler().handle(ec);
+                return false;
+            }
+            return true;
+        }
         public static void obrisiIgraca(string naziv)
         {
             try
